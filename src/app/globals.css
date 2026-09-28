@@ -1,0 +1,889 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-montserrat: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-slate-900: #080808;
+  --color-slate-800: #1b1c1d;
+  --color-slate-700: #3b3b3b;
+  --color-slate-600: #5f6360;
+  --color-slate-500: #727272;
+}
+
+@layer base {
+  :root {
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --border-subtle: #e2e8f0;
+    --text-primary: #080808;     /* Shreyas Media deep headline black */
+    --text-secondary: #5f6360;   /* Shreyas Media signature body text color */
+    --text-muted: #727272;       /* Shreyas Media meta/subtext grey */
+    --accent-emerald: #059669;
+    --accent-teal: #0891b2;
+    --accent-gold: #d97706;
+    --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+  }
+
+  body {
+    background-color: #f8fafc;
+    color: #5f6360;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    letter-spacing: normal;
+    overflow-x: hidden;
+  }
+
+  /* Consistent Montserrat ExtraBold for all headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: #080808;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    color: #5f6360;
+    line-height: 1.65;
+  }
+}
+
+/* Custom Montserrat ExtraBold enforcement across headings, navigation, buttons, cards, and labels */
+h1, h2, h3, h4, h5, h6,
+.font-heading,
+[data-reveal="heading"],
+[data-reveal="eyebrow"],
+nav a,
+header nav a,
+header a,
+header button,
+nav button,
+button,
+.btn,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+label,
+.label,
+.card-title,
+.service-card h3,
+.profile-card h3,
+.project-card h3,
+.glass-panel h2,
+.glass-panel h3,
+.glass-panel h4 {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* Apply ExtraBold (weight 800) specifically to headings, navigation, buttons, cards, labels, and important text */
+h1, h2, h3, h4, h5, h6,
+.font-heading,
+[data-reveal="heading"],
+nav a,
+header nav a,
+button,
+.btn,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+.service-card h3,
+.profile-card h3,
+.project-card h3,
+.glass-panel h2,
+.glass-panel h3,
+.glass-panel h4,
+[data-reveal="eyebrow"],
+label,
+.label,
+.montserrat-extrabold {
+  font-weight: 800 !important;
+}
+
+/* Custom typography utility classes */
+.font-heading {
+  font-family: var(--font-heading) !important;
+  font-weight: 800 !important;
+}
+
+.font-body {
+  font-family: var(--font-body) !important;
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+/* Glassmorphism & clean card utilities */
+.glass-panel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  transform: translateY(-3px);
+  border-color: #10b981;
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.08), 0 4px 8px -4px rgba(0, 0, 0, 0.04);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.2);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 50%, #92400e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.emerald-gradient-text {
+  background: linear-gradient(135deg, #059669 0%, #10b981 50%, #047857 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Reference Visual Style Effects & Animations */
+@keyframes fadeInUpShorter {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUpShorter 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Light sheen / glass reflection sweep effect */
+.shine-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-sweep::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: linear-gradient(
+    60deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.18) 50%,
+    transparent 65%
+  );
+  transform: translateX(-100%) rotate(25deg);
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 15;
+}
+
+.group:hover .shine-sweep::after,
+.shine-sweep:hover::after {
+  transform: translateX(100%) rotate(25deg);
+}
+
+/* Cinematic card elevation & ambient depth */
+.service-card-effect {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+}
+
+.service-card-effect:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.12),
+              0 10px 15px -8px rgba(5, 150, 105, 0.08);
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+/* Light & Elegant Services Card - Resting and Smooth Hover States */
+.service-card-interactive {
+  background: linear-gradient(180deg, #fcfdfd 0%, #f9fbf9 55%, #f4f7f5 100%);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.03), 0 8px 24px -4px rgba(15, 23, 42, 0.04);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+.service-card-interactive:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdfc 60%, #f8fbf9 100%);
+  transform: translateY(-6px);
+  border-color: rgba(16, 185, 129, 0.45);
+  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.08),
+              0 10px 20px -8px rgba(5, 150, 105, 0.09),
+              0 0 0 1px rgba(16, 185, 129, 0.15);
+}
+
+/* Cinematic Soundstage Vignette & 3D Lighting */
+.bg-radial-vignette {
+  background: radial-gradient(
+    ellipse 85% 70% at 50% 25%,
+    transparent 30%,
+    rgba(15, 23, 42, 0.02) 65%,
+    rgba(15, 23, 42, 0.06) 100%
+  );
+}
+
+/* Authentic 35mm Studio Film Grain Texture (Restrained 2% Opacity) */
+.film-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* 3D Perspective & Spatial Depth */
+.perspective-cinema {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+/* Subtle Anamorphic Highlight Streak */
+@keyframes anamorphicBreathing {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scaleX(0.98);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scaleX(1.02);
+  }
+}
+
+.animate-anamorphic {
+  animation: anamorphicBreathing 8s ease-in-out infinite;
+}
+
+/* Atmospheric Particle & Bokeh Drift */
+@keyframes floatDrift {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(15px, -20px) scale(1.05);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.2;
+  }
+}
+
+.animate-float-drift {
+  animation: floatDrift 12s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.03);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 10s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   Tree Media Branding: Subtle Cinematic Glow & Light Sweep
+   ========================================================================== */
+
+/* 1. Elegant ambient breathing glow behind the branding */
+@keyframes brandCinematicGlow {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+.animate-brand-glow {
+  animation: brandCinematicGlow 5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* 2. Soft, luxurious cinematic light sweep across the emblem */
+@keyframes brandLightSweep {
+  0% {
+    transform: translateX(-140%) rotate(25deg);
+    opacity: 0;
+  }
+  14% {
+    opacity: 0.85;
+  }
+  42% {
+    transform: translateX(200%) rotate(25deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(200%) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+.animate-brand-sweep {
+  animation: brandLightSweep 6s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  will-change: transform, opacity;
+}
+
+/* 3. Subtle horizontal cinematic flare/streak moving across the logo base */
+@keyframes brandFlareMovement {
+  0%, 100% {
+    opacity: 0.2;
+    transform: translateX(-6px) scaleX(0.95);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(6px) scaleX(1.05);
+  }
+}
+
+.animate-brand-flare {
+  animation: brandFlareMovement 6.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Studio Film Grid Texture */
+.bg-grid-studio {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+}
+
+/* Subtle Film Sprocket Edge Pattern */
+.bg-film-sprockets {
+  background-image: radial-gradient(circle, rgba(15, 23, 42, 0.06) 2px, transparent 2.5px);
+  background-size: 16px 24px;
+}
+
+/* ==========================================================================
+   CINEMATIC TEXT TRANSITIONS & REVEALS
+   Tailored for Tree Media Film, Casting & Editorial Aesthetic
+   ========================================================================== */
+
+/* Respect reduced motion accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  .animate-hero-eyebrow,
+  .animate-hero-stat,
+  .animate-hero-title,
+  .animate-hero-desc,
+  .animate-hero-actions {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* 1. Hero Slider Cinematic Text Sequence Keyframes */
+@keyframes heroEyebrowIn {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes heroStatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(6px);
+    letter-spacing: 0.16em;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+    letter-spacing: 0.1em;
+  }
+}
+
+@keyframes heroTitleIn {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes heroDescIn {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+@keyframes heroActionsIn {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+.animate-hero-eyebrow {
+  animation: heroEyebrowIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-hero-stat {
+  animation: heroStatIn 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+.animate-hero-title {
+  animation: heroTitleIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.34s both;
+}
+
+.animate-hero-desc {
+  animation: heroDescIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.48s both;
+}
+
+.animate-hero-actions {
+  animation: heroActionsIn 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+}
+
+/* 2. Scroll-Triggered Viewport Text Reveals with Progressive Enhancement */
+.js-reveal [data-reveal="heading"] {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(5px);
+  transition: 
+    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+
+.js-reveal [data-reveal="heading"].revealed {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+.js-reveal [data-reveal="tagline"] {
+  opacity: 0;
+  transform: translateY(14px);
+  filter: blur(4px);
+  transition: 
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.12s,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.12s,
+    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.12s;
+  will-change: opacity, transform, filter;
+}
+
+.js-reveal [data-reveal="tagline"].revealed {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+.js-reveal [data-reveal="eyebrow"] {
+  opacity: 0;
+  transform: translateY(10px) scale(0.97);
+  filter: blur(3px);
+  transition: 
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+
+.js-reveal [data-reveal="eyebrow"].revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0px);
+}
+
+.js-reveal [data-reveal="fade-up"] {
+  opacity: 0;
+  transform: translateY(16px);
+  filter: blur(3px);
+  transition: 
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+
+.js-reveal [data-reveal="fade-up"].revealed {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+/* Staggered container children */
+.js-reveal [data-reveal="stagger"] > * {
+  opacity: 0;
+  transform: translateY(18px);
+  filter: blur(4px);
+  transition: 
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+
+.js-reveal [data-reveal="stagger"].revealed > * {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+.js-reveal [data-reveal="stagger"].revealed > *:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.js-reveal [data-reveal="stagger"].revealed > *:nth-child(2) {
+  transition-delay: 0.12s;
+}
+.js-reveal [data-reveal="stagger"].revealed > *:nth-child(3) {
+  transition-delay: 0.19s;
+}
+.js-reveal [data-reveal="stagger"].revealed > *:nth-child(4) {
+  transition-delay: 0.26s;
+}
+.js-reveal [data-reveal="stagger"].revealed > *:nth-child(5) {
+  transition-delay: 0.33s;
+}
+.js-reveal [data-reveal="stagger"].revealed > *:nth-child(6) {
+  transition-delay: 0.40s;
+}
+.js-reveal [data-reveal="stagger"].revealed > *:nth-child(7) {
+  transition-delay: 0.47s;
+}
+.js-reveal [data-reveal="stagger"].revealed > *:nth-child(8) {
+  transition-delay: 0.54s;
+}
+.js-reveal [data-reveal="stagger"].revealed > *:nth-child(9) {
+  transition-delay: 0.60s;
+}
+.js-reveal [data-reveal="stagger"].revealed > *:nth-child(10) {
+  transition-delay: 0.66s;
+}
+.js-reveal [data-reveal="stagger"].revealed > *:nth-child(11) {
+  transition-delay: 0.72s;
+}
+.js-reveal [data-reveal="stagger"].revealed > *:nth-child(12) {
+  transition-delay: 0.78s;
+}
+.js-reveal [data-reveal="stagger"].revealed > *:nth-child(n + 13) {
+  transition-delay: 0.84s;
+}
+
+/* Smooth Horizontal / Scroll-Reveal Animation for Recent Media Productions */
+.js-reveal [data-reveal="horizontal-stagger"] > * {
+  opacity: 0;
+  transform: translate3d(-28px, 14px, 0);
+  filter: blur(5px);
+  transition: 
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+
+.js-reveal [data-reveal="horizontal-stagger"].revealed > * {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0px);
+}
+
+.js-reveal [data-reveal="horizontal-stagger"].revealed > *:nth-child(1) {
+  transition-delay: 0.08s;
+}
+.js-reveal [data-reveal="horizontal-stagger"].revealed > *:nth-child(2) {
+  transition-delay: 0.22s;
+}
+.js-reveal [data-reveal="horizontal-stagger"].revealed > *:nth-child(3) {
+  transition-delay: 0.36s;
+}
+
+/* Specific delay modifiers */
+.js-reveal [data-reveal-delay="100"] { transition-delay: 0.1s !important; }
+.js-reveal [data-reveal-delay="150"] { transition-delay: 0.15s !important; }
+.js-reveal [data-reveal-delay="200"] { transition-delay: 0.2s !important; }
+.js-reveal [data-reveal-delay="250"] { transition-delay: 0.25s !important; }
+.js-reveal [data-reveal-delay="300"] { transition-delay: 0.3s !important; }
+.js-reveal [data-reveal-delay="350"] { transition-delay: 0.35s !important; }
+.js-reveal [data-reveal-delay="400"] { transition-delay: 0.4s !important; }
+
+/* Page Transition & Navigation Loading Enhancements */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0.7;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter-transition {
+  animation: pageFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes skeletonPulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.animate-skeleton-pulse {
+  animation: skeletonPulseGlow 1.8s ease-in-out infinite;
+}
+
+/* Global PageNavigationLoader Keyframes */
+@keyframes navShimmerSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes miniTrackSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes tmSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tmSpinCounter {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* ==========================================================================
+   Cinematic Contact Hero: 35mm Film Reel & Celluloid Ribbon Animations
+   ========================================================================== */
+
+@keyframes cinematicReelSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes filmSprocketAdvance {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -48;
+  }
+}
+
+@keyframes filmStripBreathe {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(-3px, -5px, 0) rotate(0.35deg);
+  }
+}
+
+@keyframes cinematicProjectorBeam {
+  0%, 100% {
+    opacity: 0.22;
+    transform: scaleX(0.97) skewY(-0.5deg);
+  }
+  50% {
+    opacity: 0.42;
+    transform: scaleX(1.03) skewY(0.5deg);
+  }
+}
+
+.animate-reel-spin {
+  animation: cinematicReelSpin 55s linear infinite;
+  will-change: transform;
+}
+
+.animate-sprocket-advance {
+  animation: filmSprocketAdvance 4s linear infinite;
+}
+
+.animate-film-strip-breathe {
+  animation: filmStripBreathe 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-projector-beam {
+  animation: cinematicProjectorBeam 8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Reduced Motion Safety */
+@media (prefers-reduced-motion: reduce) {
+  .animate-reel-spin,
+  .animate-sprocket-advance,
+  .animate-film-strip-breathe,
+  .animate-projector-beam {
+    animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   Home Slider (Last Background): Grand International Beauty Pageant & Casting Cinematics
+   Very slow cinematic zoom-in → gentle zoom-out → zoom-in with subtle camera pan
+   ========================================================================== */
+
+@keyframes pageantCameraMovement {
+  0% {
+    transform: scale3d(1.03, 1.03, 1) translate3d(0%, 0%, 0);
+  }
+  30% {
+    /* Slow cinematic zoom-in drifting smoothly towards stage spotlights */
+    transform: scale3d(1.085, 1.085, 1) translate3d(-1.2%, -0.8%, 0);
+  }
+  58% {
+    /* Gentle zoom-out easing wider with subtle rightward camera pan */
+    transform: scale3d(1.04, 1.04, 1) translate3d(0.9%, -0.2%, 0);
+  }
+  82% {
+    /* Second majestic zoom-in tracking runway subject with elegant presence */
+    transform: scale3d(1.08, 1.08, 1) translate3d(-0.4%, -0.6%, 0);
+  }
+  100% {
+    /* Seamless return to initial framing */
+    transform: scale3d(1.03, 1.03, 1) translate3d(0%, 0%, 0);
+  }
+}
+
+@keyframes pageantAtmosphericPulse {
+  0%, 100% {
+    opacity: 0.60;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.80;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes pageantBeamGlow {
+  0%, 100% {
+    opacity: 0.68;
+  }
+  45% {
+    opacity: 0.90;
+  }
+  75% {
+    opacity: 0.74;
+  }
+}
+
+.animate-pageant-camera {
+  animation: pageantCameraMovement 24s cubic-bezier(0.42, 0.05, 0.58, 0.95) infinite;
+  will-change: transform;
+  transform-origin: 50% 46%;
+}
+
+.animate-pageant-atmosphere {
+  animation: pageantAtmosphericPulse 14s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-pageant-beam {
+  animation: pageantBeamGlow 18s ease-in-out infinite;
+  will-change: opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pageant-camera,
+  .animate-pageant-atmosphere,
+  .animate-pageant-beam {
+    animation: none !important;
+  }
+}
+
+
+
+
