@@ -1,17 +1,66 @@
-import { db } from "@/db";
-import { testimonials } from "@/db/schema";
-import { eq, asc } from "drizzle-orm";
+"use client";
+
+import { useEffect, useState } from "react";
 import { Sparkles, Star } from "lucide-react";
 import PageAtmosphere from "@/components/user/PageAtmosphere";
 
-export const revalidate = 60;
+interface TestimonialItem {
+  id: string;
+  personName: string;
+  profileImage?: string | null;
+  designation: string;
+  company: string;
+  testimonial: string;
+  rating: number;
+}
 
-export default async function TestimonialsPage() {
-  const reviews = await db
-    .select()
-    .from(testimonials)
-    .where(eq(testimonials.status, "published"))
-    .orderBy(asc(testimonials.displayOrder));
+const DEFAULT_TESTIMONIALS: TestimonialItem[] = [
+  {
+    id: "0f7853a4-64fa-42e0-8aee-70837e007ccf",
+    personName: "Alexandra Sterling",
+    profileImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop",
+    designation: "Executive Producer",
+    company: "Paramount International",
+    testimonial: "Tree Media is without question our first call when casting European and American talent. Their artists arrive prepared, disciplined, and bring genuine electricity to set.",
+    rating: 5,
+  },
+  {
+    id: "48319c01-10bf-461c-8adf-71f9c9178097",
+    personName: "Jean-Luc Moreau",
+    profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
+    designation: "Creative Director",
+    company: "Vogue Creative Studio",
+    testimonial: "The professionalism and adaptability of Tree Media's fashion roster is second to none. They understand luxury aesthetics intimately.",
+    rating: 5,
+  },
+  {
+    id: "beb672fa-7561-4125-95f7-faffb0a9ce22",
+    personName: "David K. Vance",
+    profileImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop",
+    designation: "Senior VP of Casting",
+    company: "Apex Media Studios",
+    testimonial: "Finding actors with both emotional depth and international box office appeal is rare. Tree Media consistently delivers that rare combination.",
+    rating: 5,
+  },
+];
+
+export default function TestimonialsPage() {
+  const [reviews, setReviews] = useState<TestimonialItem[]>(DEFAULT_TESTIMONIALS);
+
+  useEffect(() => {
+    async function loadTestimonials() {
+      try {
+        const res = await fetch("/api/testimonials");
+        const data = await res.json();
+        if (data.success && Array.isArray(data.testimonials)) {
+          setReviews(data.testimonials);
+        }
+      } catch (err) {
+        console.error("Failed to load testimonials:", err);
+      }
+    }
+    loadTestimonials();
+  }, []);
 
   return (
     <div className="relative space-y-16 py-12 max-w-7xl mx-auto px-6 min-h-screen">
