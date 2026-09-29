@@ -95,18 +95,18 @@ export default function PageHeroVisual({
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-transparent to-slate-950/40 z-20 pointer-events-none" />
 
         {/* 2. Anamorphic Lens Flare & Ambient Lighting Sweep */}
-        <div className="absolute -top-32 -left-32 w-80 h-80 rounded-full bg-emerald-500/15 blur-3xl pointer-events-none z-20" />
+        <div className="absolute -top-32 -left-32 w-80 h-80 rounded-full bg-[#DC8B20]/20 blur-3xl pointer-events-none z-20" />
         <div className="absolute -bottom-32 -right-32 w-80 h-80 rounded-full bg-cyan-500/15 blur-3xl pointer-events-none z-20" />
 
         {/* 3. Top Film Metadata Badges */}
         <div className="absolute top-5 left-6 right-6 z-30 flex items-center justify-between pointer-events-none">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/45 backdrop-blur-md border border-white/20 text-white text-[11px] font-mono tracking-wider uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#f1b343] animate-pulse" />
             <span>{pageCategory}</span>
           </div>
 
           <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/35 backdrop-blur-md border border-white/15 text-slate-300 text-[10px] font-mono tracking-widest uppercase">
-            <Clapperboard className="w-3 h-3 text-emerald-400" />
+            <Clapperboard className="w-3 h-3 text-[#DC8B20]" />
             <span>{aspectBadge}</span>
           </div>
         </div>
@@ -121,8 +121,8 @@ export default function PageHeroVisual({
               className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-10 sm:right-28 z-30 space-y-2.5 max-w-3xl"
             >
               {/* Category / Sub-tag */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md border border-emerald-400/40 text-emerald-300 text-xs font-semibold tracking-wider uppercase animate-hero-eyebrow">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#DC8B20]/20 backdrop-blur-md border border-[#DC8B20]/40 text-[#f7cc74] text-xs font-semibold tracking-wider uppercase animate-hero-eyebrow">
+                <Sparkles className="w-3.5 h-3.5 text-[#DC8B20]" />
                 <span>{slide.tag}</span>
               </div>
 
@@ -168,7 +168,7 @@ export default function PageHeroVisual({
               aria-label={`Go to visual slide ${idx + 1}`}
               className={`transition-all duration-300 rounded-full cursor-pointer ${
                 currentSlide === idx
-                  ? "w-7 h-2 bg-emerald-400 shadow-sm shadow-emerald-400/60"
+                  ? "w-7 h-2 bg-[#f1b343] shadow-sm shadow-[#DC8B20]/25"
                   : "w-2 h-2 bg-white/45 hover:bg-white/90"
               }`}
             />

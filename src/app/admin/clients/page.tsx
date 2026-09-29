@@ -108,7 +108,7 @@ export default function AdminClientsPage() {
           </span>
           <button
             onClick={handleStartNew}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 transition-all"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white text-xs font-bold shadow-md shadow-[#DC8B20]/25 transition-all"
           >
             <PlusCircle className="w-4 h-4" />
             <span>Add Brand Partner</span>
@@ -138,7 +138,7 @@ export default function AdminClientsPage() {
                     required
                     value={editingItem.name}
                     onChange={(e) => setEditingItem({ ...editingItem, name: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                   />
                 </div>
 
@@ -149,7 +149,7 @@ export default function AdminClientsPage() {
                     placeholder="Details about collaborations, feature productions, or campaign history..."
                     value={editingItem.description || ""}
                     onChange={(e) => setEditingItem({ ...editingItem, description: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none resize-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none resize-none"
                   />
                 </div>
 
@@ -166,7 +166,7 @@ export default function AdminClientsPage() {
                       type="number"
                       value={editingItem.displayOrder}
                       onChange={(e) => setEditingItem({ ...editingItem, displayOrder: Number(e.target.value) })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                     />
                   </div>
 
@@ -175,7 +175,7 @@ export default function AdminClientsPage() {
                     <select
                       value={editingItem.status}
                       onChange={(e) => setEditingItem({ ...editingItem, status: e.target.value as any })}
-                      className="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                      className="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                     >
                       <option value="published" className="bg-white text-slate-900">Published</option>
                       <option value="draft" className="bg-white text-slate-900">Draft</option>
@@ -195,7 +195,7 @@ export default function AdminClientsPage() {
                   <button
                     type="submit"
                     disabled={saving}
-                    className="px-6 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-2 shadow-sm"
+                    className="px-6 py-2 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white text-xs font-bold flex items-center gap-2 shadow-sm"
                   >
                     {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                     <span>Save Partner</span>
@@ -210,7 +210,7 @@ export default function AdminClientsPage() {
         <div className="grid grid-cols-4 gap-6">
           {loading ? (
             <div className="col-span-4 py-12 flex justify-center">
-              <Loader2 className="w-6 h-6 text-emerald-600 animate-spin" />
+              <Loader2 className="w-6 h-6 text-[#DC8B20] animate-spin" />
             </div>
           ) : (
             items.map((c) => (
@@ -231,7 +231,7 @@ export default function AdminClientsPage() {
                 </div>
 
                 <div className="pt-4 border-t border-slate-100 mt-4 flex items-center justify-between text-xs">
-                  <span className="text-[10px] text-emerald-700 font-mono font-medium">#{c.displayOrder}</span>
+                  <span className="text-[10px] text-[#DC8B20] font-mono font-medium">#{c.displayOrder}</span>
                   <div className="flex items-center gap-1">
                     <button
                       onClick={() => {

@@ -52,10 +52,10 @@ export default function CinematicBackground() {
     const particles: Particle[] = [];
 
     const COLOR_PALETTES = {
-      gold: { r: 217, g: 140, b: 25 },     // Cinematic warm gold / amber
-      emerald: { r: 16, g: 185, b: 129 },  // Tree Media signature emerald
+      gold: { r: 220, g: 139, b: 32 },     // Cinematic warm #DC8B20
+      emerald: { r: 220, g: 139, b: 32 },  // Tree Media signature #DC8B20
       silver: { r: 203, g: 213, b: 225 },   // Projector dust / 35mm silver
-      teal: { r: 20, g: 184, b: 166 },      // Deep cinema teal
+      teal: { r: 245, g: 158, b: 11 },      // Warm ambient amber
     };
 
     for (let i = 0; i < particleCount; i++) {
@@ -155,7 +155,7 @@ export default function CinematicBackground() {
       );
       anamorphicGradient.addColorStop(
         0,
-        `rgba(16, 185, 129, ${flareGlow * 1.5})`
+        `rgba(220, 139, 32, ${flareGlow * 1.5})`
       );
       anamorphicGradient.addColorStop(
         0.3,

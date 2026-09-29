@@ -68,7 +68,7 @@ export default function ProjectDetailClientView({
         <Link
           href="/portfolio"
           prefetch={true}
-          className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500 hover:text-emerald-700 transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500 hover:text-[#DC8B20] transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Portfolio Catalog</span>
@@ -86,7 +86,7 @@ export default function ProjectDetailClientView({
           data-reveal="eyebrow"
           className="flex flex-wrap items-center gap-3"
         >
-          <span className="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-50 text-emerald-800 border border-emerald-200 shadow-xs">
+          <span className="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#DC8B20]/10 text-[#915514] border border-[#DC8B20]/30 shadow-xs">
             {project.category}
           </span>
           {project.isFeatured && (
@@ -97,7 +97,7 @@ export default function ProjectDetailClientView({
           )}
           <span className="text-slate-300 hidden sm:inline">•</span>
           <div className="flex items-center gap-1.5 text-xs text-slate-700 font-semibold">
-            <Building2 className="w-4 h-4 text-emerald-600" />
+            <Building2 className="w-4 h-4 text-[#DC8B20]" />
             <span>{project.clientName}</span>
           </div>
           <span className="text-slate-300 hidden sm:inline">•</span>
@@ -106,8 +106,8 @@ export default function ProjectDetailClientView({
             <span>{project.completionDate}</span>
           </div>
           <span className="text-slate-300 hidden sm:inline">•</span>
-          <div className="flex items-center gap-1.5 text-xs text-emerald-700 font-medium">
-            <ShieldCheck className="w-4 h-4 text-emerald-600" />
+          <div className="flex items-center gap-1.5 text-xs text-[#DC8B20] font-medium">
+            <ShieldCheck className="w-4 h-4 text-[#DC8B20]" />
             <span>Verified Production</span>
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function ProjectDetailClientView({
           />
           {/* Atmospheric vignettes */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-tr from-emerald-950/60 via-transparent to-transparent mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#2a1703]/95 via-transparent to-transparent mix-blend-multiply" />
 
           {/* Interactive Play Trailer Overlay if video exists */}
           {primaryVideo && (
@@ -154,7 +154,7 @@ export default function ProjectDetailClientView({
                     description: `Client: ${project.clientName}`,
                   })
                 }
-                className="group/btn p-5 rounded-full bg-emerald-600/90 hover:bg-emerald-500 text-white backdrop-blur-md shadow-2xl transition-all duration-300 hover:scale-110 flex items-center gap-3 pl-6 pr-7 border border-emerald-400/40"
+                className="group/btn p-5 rounded-full bg-[#DC8B20]/25 hover:bg-[#DC8B20] text-white backdrop-blur-md shadow-2xl transition-all duration-300 hover:scale-110 flex items-center gap-3 pl-6 pr-7 border border-[#DC8B20]/40"
               >
                 <Play className="w-6 h-6 fill-white transition-transform group-hover/btn:scale-110" />
                 <span className="text-sm font-bold tracking-wide uppercase">
@@ -166,7 +166,7 @@ export default function ProjectDetailClientView({
 
           {/* Bottom strip in hero photo */}
           <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-xs text-white drop-shadow-md">
-            <span className="font-semibold tracking-wider uppercase text-emerald-300">
+            <span className="font-semibold tracking-wider uppercase text-[#f7cc74]">
               {project.clientName}
             </span>
             <span className="text-slate-300 font-mono">
@@ -186,7 +186,7 @@ export default function ProjectDetailClientView({
               data-reveal="fade-up"
               className="glass-panel bg-white p-8 lg:p-10 rounded-3xl border border-slate-200 shadow-xs space-y-4"
             >
-              <div className="flex items-center gap-2 text-emerald-700 text-xs font-bold uppercase tracking-wider">
+              <div className="flex items-center gap-2 text-[#DC8B20] text-xs font-bold uppercase tracking-wider">
                 <Clapperboard className="w-4 h-4" />
                 <span>Production Narrative & Case Study</span>
               </div>
@@ -210,25 +210,25 @@ export default function ProjectDetailClientView({
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-100">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#DC8B20] shrink-0 mt-0.5" />
                 <span className="text-xs text-slate-700 font-medium">
                   Principal Actor & Runway Model Casting
                 </span>
               </div>
               <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-100">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#DC8B20] shrink-0 mt-0.5" />
                 <span className="text-xs text-slate-700 font-medium">
                   SAG-AFTRA & International Union Compliance
                 </span>
               </div>
               <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-100">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#DC8B20] shrink-0 mt-0.5" />
                 <span className="text-xs text-slate-700 font-medium">
                   High-Resolution Commercial & Cinema Stills
                 </span>
               </div>
               <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-100">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-4 h-4 text-[#DC8B20] shrink-0 mt-0.5" />
                 <span className="text-xs text-slate-700 font-medium">
                   Post-Production Voiceover ADR & Localization
                 </span>
@@ -299,10 +299,10 @@ export default function ProjectDetailClientView({
           <div
             data-reveal="fade-up"
             data-reveal-delay="150"
-            className="glass-panel bg-white p-7 rounded-3xl border border-emerald-200 shadow-md space-y-6 sticky top-28"
+            className="glass-panel bg-white p-7 rounded-3xl border border-[#DC8B20]/30 shadow-md space-y-6 sticky top-28"
           >
             <div>
-              <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider block">
+              <span className="text-xs font-bold text-[#DC8B20] uppercase tracking-wider block">
                 Production Engagement
               </span>
               <h3 className="text-xl font-bold text-slate-900 mt-1">
@@ -317,7 +317,7 @@ export default function ProjectDetailClientView({
               <Link
                 href={`/contact?projectId=${project.id}`}
                 prefetch={true}
-                className="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.01]"
+                className="w-full py-3.5 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white font-bold text-xs shadow-md shadow-[#DC8B20]/25 flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.01]"
               >
                 <span>Request Production Quote</span>
                 <ArrowRight className="w-4 h-4" />
@@ -368,7 +368,7 @@ export default function ProjectDetailClientView({
             <div>
               <span
                 data-reveal="eyebrow"
-                className="text-xs font-semibold text-emerald-700 uppercase tracking-wider block"
+                className="text-xs font-semibold text-[#DC8B20] uppercase tracking-wider block"
               >
                 More Case Studies
               </span>
@@ -382,7 +382,7 @@ export default function ProjectDetailClientView({
             <Link
               href="/portfolio"
               prefetch={true}
-              className="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1.5"
+              className="text-xs font-bold text-[#DC8B20] hover:text-[#DC8B20] flex items-center gap-1.5"
             >
               <span>View All Portfolio</span>
               <ArrowRight className="w-3.5 h-3.5" />

@@ -185,9 +185,9 @@ function NavigationLoaderCore() {
                 ? "width 0.12s ease-out"
                 : "width 0.2s cubic-bezier(0.1, 0.9, 0.2, 1)",
             background:
-              "linear-gradient(90deg, #059669 0%, #10b981 35%, #d97706 75%, #f59e0b 100%)",
+              "linear-gradient(90deg, #DC8B20 0%, #DC8B20 35%, #d97706 75%, #f59e0b 100%)",
             boxShadow:
-              "0 0 16px rgba(16, 185, 129, 0.9), 0 0 8px rgba(217, 119, 6, 0.8)",
+              "0 0 16px rgba(220, 139, 32, 0.9), 0 0 8px rgba(217, 119, 6, 0.8)",
           }}
         >
           {/* Glowing Peg at leading edge */}
@@ -223,7 +223,7 @@ function NavigationLoaderCore() {
         }}
       >
         <div
-          className="flex flex-col items-center gap-4 p-6 sm:px-8 sm:py-7 rounded-3xl bg-white/95 border border-emerald-500/30 shadow-2xl shadow-emerald-950/20 text-slate-800 transition-all duration-200"
+          className="flex flex-col items-center gap-4 p-6 sm:px-8 sm:py-7 rounded-3xl bg-white/95 border border-[#DC8B20]/40 shadow-2xl shadow-[#DC8B20]/25 text-slate-800 transition-all duration-200"
           style={{
             transform: showOverlay && visible ? "scale(1)" : "scale(0.95)",
           }}
@@ -239,7 +239,7 @@ function NavigationLoaderCore() {
             />
             {/* Inner Counter-Rotating Emerald Ring */}
             <div
-              className="absolute inset-1.5 rounded-full border-[2px] border-transparent border-b-emerald-600 border-l-emerald-400"
+              className="absolute inset-1.5 rounded-full border-[2px] border-transparent border-b-[#DC8B20] border-l-[#f1b343]"
               style={{
                 animation: "tmSpinCounter 0.75s linear infinite",
               }}
@@ -247,8 +247,8 @@ function NavigationLoaderCore() {
             {/* Center Monogram */}
             <div className="w-9 h-9 rounded-full bg-white shadow-xs border border-slate-200/80 flex items-center justify-center">
               <span
-                className="font-serif font-black text-slate-900 text-xs tracking-wider"
-                style={{ fontFamily: "'Cinzel', serif" }}
+                className="font-black text-slate-900 text-xs tracking-wider"
+                style={{ fontFamily: "'Manrope', sans-serif" }}
               >
                 TM
               </span>
@@ -258,14 +258,14 @@ function NavigationLoaderCore() {
           {/* Typography */}
           <div className="space-y-1 text-center">
             <h3
-              className="font-serif font-black text-sm uppercase tracking-[0.25em] text-slate-900"
-              style={{ fontFamily: "'Cinzel', serif" }}
+              className="font-black text-sm uppercase tracking-[0.25em] text-slate-900"
+              style={{ fontFamily: "'Manrope', sans-serif" }}
             >
               Tree Media
             </h3>
-            {/* <div className="flex items-center justify-center gap-1.5 text-xs font-semibold text-emerald-700 tracking-wider">
+            {/* <div className="flex items-center justify-center gap-1.5 text-xs font-semibold text-[#DC8B20] tracking-wider">
               <span>Navigating</span>
-              <span className="flex gap-0.5 text-emerald-600 text-sm leading-none">
+              <span className="flex gap-0.5 text-[#DC8B20] text-sm leading-none">
                 <span className="animate-bounce" style={{ animationDelay: "0ms" }}>.</span>
                 <span className="animate-bounce" style={{ animationDelay: "150ms" }}>.</span>
                 <span className="animate-bounce" style={{ animationDelay: "300ms" }}>.</span>
@@ -276,7 +276,7 @@ function NavigationLoaderCore() {
           {/* Micro animated progress line */}
           <div className="w-28 h-1 rounded-full bg-slate-100 overflow-hidden relative border border-slate-200/60">
             <div
-              className="h-full w-full rounded-full bg-gradient-to-r from-emerald-500 to-amber-500"
+              className="h-full w-full rounded-full bg-gradient-to-r from-[#DC8B20] to-amber-500"
               style={{
                 animation: "miniTrackSweep 1.2s infinite ease-in-out",
               }}

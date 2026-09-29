@@ -265,18 +265,18 @@ export default function HomeSlider() {
                 >
                   {/* Eyebrow badge */}
                   <div
-                    className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 backdrop-blur-md border border-emerald-400/40 text-emerald-300 text-xs font-semibold tracking-wider uppercase ${
+                    className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#DC8B20]/20 backdrop-blur-md border border-[#DC8B20]/40 text-[#f7cc74] text-xs font-semibold tracking-wider uppercase ${
                       isActive ? "animate-hero-eyebrow" : ""
                     }`}
                   >
-                    <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+                    <Sparkles className="w-3.5 h-3.5 text-[#DC8B20]" />
                     <span>{slide.eyebrow}</span>
                   </div>
 
                   {/* Big Stat / Heading Overlay (Matching Reference Image) */}
                   <div className="space-y-1">
                     <div
-                      className={`text-2xl sm:text-3xl font-mono font-black tracking-widest text-emerald-400 ${
+                      className={`text-2xl sm:text-3xl font-mono font-black tracking-widest text-[#DC8B20] ${
                         isActive ? "animate-hero-stat" : ""
                       }`}
                     >
@@ -309,7 +309,7 @@ export default function HomeSlider() {
                     <Link
                       href={slide.primaryBtnLink}
                       prefetch={true}
-                      className="px-7 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-98 text-white font-bold text-sm tracking-wide shadow-lg shadow-emerald-600/30 hover:shadow-emerald-600/50 transition-all flex items-center gap-2 group cursor-pointer"
+                      className="px-7 py-3 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] active:scale-98 text-white font-bold text-sm tracking-wide shadow-lg shadow-[#DC8B20]/25 hover:shadow-[#DC8B20]/25 transition-all flex items-center gap-2 group cursor-pointer"
                     >
                       <span>{slide.primaryBtnText}</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -362,7 +362,7 @@ export default function HomeSlider() {
             aria-label={`Go to slide ${idx + 1}`}
             className={`transition-all duration-300 rounded-full cursor-pointer ${
               currentSlide === idx
-                ? "w-7 h-2.5 bg-emerald-400 shadow-sm shadow-emerald-400/50"
+                ? "w-7 h-2.5 bg-[#f1b343] shadow-sm shadow-[#DC8B20]/25"
                 : "w-2.5 h-2.5 bg-white/50 hover:bg-white/90"
             }`}
           />

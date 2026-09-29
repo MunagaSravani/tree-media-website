@@ -45,11 +45,11 @@ interface ServiceColorTint {
 //   {
 //     id: "emerald",
 //     name: "Emerald Green",
-//     wash: "bg-emerald-950/70",
-//     colorBlend: "bg-emerald-600 mix-blend-color opacity-90",
-//     gradient: "bg-gradient-to-t from-emerald-950/95 via-emerald-900/60 to-emerald-800/40",
-//     accentText: "text-emerald-300",
-//     badgeBorder: "border-emerald-500/40",
+//     wash: "bg-[#2a1703]/80",
+//     colorBlend: "bg-[#DC8B20] mix-blend-color opacity-90",
+//     gradient: "bg-gradient-to-t from-[#2a1703]/95 via-[#422306]/60 to-[#774614]/40",
+//     accentText: "text-[#f7cc74]",
+//     badgeBorder: "border-[#DC8B20]/40",
 //   },
 //   {
 //     id: "crimson",
@@ -99,13 +99,13 @@ interface ServiceColorTint {
 // ];
 const SERVICE_TINTS: ServiceColorTint[] = [
   {
-    id: "emerald",
-    name: "Emerald Green",
-    wash: "bg-emerald-950/70",
-    colorBlend: "bg-emerald-600 mix-blend-color opacity-45",
-    gradient: "bg-gradient-to-t from-emerald-950/95 via-emerald-900/60 to-emerald-800/40",
-    accentText: "text-emerald-300",
-    badgeBorder: "border-emerald-500/40",
+    id: "amber-gold",
+    name: "Tree Gold",
+    wash: "bg-[#2a1703]/80",
+    colorBlend: "bg-[#DC8B20] mix-blend-color opacity-45",
+    gradient: "bg-gradient-to-t from-[#2a1703]/95 via-[#422306]/60 to-[#774614]/40",
+    accentText: "text-[#f7cc74]",
+    badgeBorder: "border-[#DC8B20]/40",
   },
   {
     id: "crimson",
@@ -274,7 +274,7 @@ export default function ServiceCard({ service, index = 0 }: ServiceCardProps) {
               prefetch={true}
               className="group/title block"
             >
-              <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug drop-shadow-md group-hover/title:text-emerald-300 transition-colors duration-300">
+              <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug drop-shadow-md group-hover/title:text-[#DC8B20] transition-colors duration-300">
                 {service.title}
               </h3>
             </Link>
@@ -290,7 +290,7 @@ export default function ServiceCard({ service, index = 0 }: ServiceCardProps) {
               <Link
                 href={`/services/${service.slug || service.id}`}
                 prefetch={true}
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-white/90 hover:text-emerald-300 transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-white/90 hover:text-[#DC8B20] transition-colors"
               >
                 <span>View Service Scope</span>
                 <ChevronRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1.5" />
@@ -299,7 +299,7 @@ export default function ServiceCard({ service, index = 0 }: ServiceCardProps) {
               <Link
                 href={`/contact?serviceId=${service.id}`}
                 prefetch={true}
-                className="px-3.5 py-1.5 rounded-xl bg-white/20 hover:bg-emerald-600 text-white border border-white/30 hover:border-emerald-500 backdrop-blur-md text-[11px] font-semibold transition-all duration-300 shadow-sm hover:scale-105"
+                className="px-3.5 py-1.5 rounded-xl bg-white/20 hover:bg-[#DC8B20] text-white border border-white/30 hover:border-[#DC8B20]/300 backdrop-blur-md text-[11px] font-semibold transition-all duration-300 shadow-sm hover:scale-105"
               >
                 Inquire
               </Link>

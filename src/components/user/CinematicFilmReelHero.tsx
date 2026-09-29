@@ -149,7 +149,7 @@ const CINEMA_EDGE_CODES = [
   "SAFETY FILM",
   "KODAK 5219",
   "TM • CASTING REEL",
-  "EMERALD 500T",
+  "GOLD 500T",
   "FRAME # 04",
   "TREE MEDIA GLOBAL",
   "2.39:1 CINEMASCOPE",
@@ -410,7 +410,7 @@ export default function CinematicFilmReelHero() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] max-w-[95vw] h-[360px] opacity-25 lg:opacity-35 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 65% 50% at 50% 45%, rgba(16, 185, 129, 0.13) 0%, rgba(5, 150, 105, 0.04) 45%, transparent 75%)",
+            "radial-gradient(ellipse 65% 50% at 50% 45%, rgba(220, 139, 32, 0.13) 0%, rgba(220, 139, 32, 0.04) 45%, transparent 75%)",
           filter: "blur(48px)",
         }}
       />
@@ -441,7 +441,7 @@ export default function CinematicFilmReelHero() {
           preserveAspectRatio="xMidYMid meet"
           className="w-full h-full"
           style={{
-            filter: "drop-shadow(0 14px 28px rgba(15, 23, 42, 0.22)) drop-shadow(0 0 16px rgba(16, 185, 129, 0.12))",
+            filter: "drop-shadow(0 14px 28px rgba(15, 23, 42, 0.22)) drop-shadow(0 0 16px rgba(220, 139, 32, 0.12))",
           }}
         >
           <defs>
@@ -449,20 +449,20 @@ export default function CinematicFilmReelHero() {
             <linearGradient id="celluloidStripGrad" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#090d16" stopOpacity="0.88" />
               <stop offset="22%" stopColor="#111827" stopOpacity="0.92" />
-              <stop offset="42%" stopColor="#062e24" stopOpacity="0.85" /> {/* Subtle Tree Media emerald accent */}
+              <stop offset="42%" stopColor="#2e1d06" stopOpacity="0.85" /> {/* Subtle Tree Media #DC8B20 accent */}
               <stop offset="50%" stopColor="#0f172a" stopOpacity="0.75" /> {/* Softened directly behind center heading */}
-              <stop offset="58%" stopColor="#062e24" stopOpacity="0.85" />
+              <stop offset="58%" stopColor="#2e1d06" stopOpacity="0.85" />
               <stop offset="78%" stopColor="#111827" stopOpacity="0.92" />
               <stop offset="100%" stopColor="#090d16" stopOpacity="0.88" />
             </linearGradient>
 
-            {/* Specular Spine & Edge Glint with Tree Media Emerald Accent */}
+            {/* Specular Spine & Edge Glint with Tree Media #DC8B20 Accent */}
             <linearGradient id="stripSpecularGrad" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#475569" stopOpacity="0.25" />
               <stop offset="25%" stopColor="#ffffff" stopOpacity="0.45" />
-              <stop offset="38%" stopColor="#10b981" stopOpacity="0.65" />
+              <stop offset="38%" stopColor="#DC8B20" stopOpacity="0.65" />
               <stop offset="50%" stopColor="#64748b" stopOpacity="0.30" />
-              <stop offset="72%" stopColor="#10b981" stopOpacity="0.65" />
+              <stop offset="72%" stopColor="#DC8B20" stopOpacity="0.65" />
               <stop offset="85%" stopColor="#ffffff" stopOpacity="0.45" />
               <stop offset="100%" stopColor="#475569" stopOpacity="0.25" />
             </linearGradient>
@@ -470,7 +470,7 @@ export default function CinematicFilmReelHero() {
             {/* Translucent Frame Aperture Emulsion Shader */}
             <linearGradient id="frameApertureGrad" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#0f172a" stopOpacity="0.45" />
-              <stop offset="48%" stopColor="#052e22" stopOpacity="0.35" /> {/* Very subtle green glow in aperture */}
+              <stop offset="48%" stopColor="#2e1b05" stopOpacity="0.35" /> {/* Very subtle #DC8B20 glow in aperture */}
               <stop offset="100%" stopColor="#020617" stopOpacity="0.55" />
             </linearGradient>
 
@@ -484,9 +484,9 @@ export default function CinematicFilmReelHero() {
             {/* Outer Rail Stroke Gradient */}
             <linearGradient id="outerRailGrad" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stopColor="#334155" stopOpacity="0.6" />
-              <stop offset="35%" stopColor="#10b981" stopOpacity="0.75" />
+              <stop offset="35%" stopColor="#DC8B20" stopOpacity="0.75" />
               <stop offset="50%" stopColor="#475569" stopOpacity="0.45" />
-              <stop offset="65%" stopColor="#10b981" stopOpacity="0.75" />
+              <stop offset="65%" stopColor="#DC8B20" stopOpacity="0.75" />
               <stop offset="100%" stopColor="#334155" stopOpacity="0.6" />
             </linearGradient>
 
@@ -518,7 +518,7 @@ export default function CinematicFilmReelHero() {
             <path
               ref={frameWindowsRef}
               fill="url(#frameApertureGrad)"
-              stroke="rgba(16, 185, 129, 0.22)"
+              stroke="rgba(220, 139, 32, 0.22)"
               strokeWidth="0.8"
             />
 
@@ -659,13 +659,13 @@ export default function CinematicFilmReelHero() {
       </div>
 
       {/* 4. Ambient Floating Silver-Halide Light Motes */}
-      <div className="absolute top-[20%] right-[22%] w-2 h-2 rounded-full bg-emerald-400/20 blur-[1px] animate-float-drift" />
+      <div className="absolute top-[20%] right-[22%] w-2 h-2 rounded-full bg-[#DC8B20]/20 blur-[1px] animate-float-drift" />
       <div
         className="absolute top-[65%] right-[16%] w-2.5 h-2.5 rounded-full bg-slate-400/20 blur-[1.5px] animate-float-drift"
         style={{ animationDelay: "3s", animationDuration: "15s" }}
       />
       <div
-        className="absolute top-[32%] left-[24%] w-1.5 h-1.5 rounded-full bg-emerald-500/15 blur-[0.8px] animate-float-drift"
+        className="absolute top-[32%] left-[24%] w-1.5 h-1.5 rounded-full bg-[#DC8B20]/20 blur-[0.8px] animate-float-drift"
         style={{ animationDelay: "6s", animationDuration: "18s" }}
       />
     </div>

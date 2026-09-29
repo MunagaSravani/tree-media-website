@@ -56,9 +56,9 @@ const BRAND_LOGOS: BrandItem[] = [
     svg: (
       <div className="flex items-center gap-2.5">
         <div className="flex flex-col gap-0.5">
-          <div className="w-4 h-1.5 bg-slate-800 group-hover/logo:bg-emerald-600 transition-colors" />
-          <div className="w-4 h-1.5 bg-slate-800 group-hover/logo:bg-emerald-600 transition-colors" />
-          <div className="w-4 h-1.5 bg-slate-800 group-hover/logo:bg-emerald-600 transition-colors" />
+          <div className="w-4 h-1.5 bg-slate-800 group-hover/logo:bg-[#DC8B20] transition-colors" />
+          <div className="w-4 h-1.5 bg-slate-800 group-hover/logo:bg-[#DC8B20] transition-colors" />
+          <div className="w-4 h-1.5 bg-slate-800 group-hover/logo:bg-[#DC8B20] transition-colors" />
         </div>
         <div className="flex flex-col text-left">
           <span className="font-mono tracking-[0.25em] text-xs font-black text-slate-800 group-hover/logo:text-slate-900 transition-colors">
@@ -135,7 +135,7 @@ const BRAND_LOGOS: BrandItem[] = [
           <div className="w-4 h-4 bg-slate-900 text-white flex items-center justify-center text-[10px] font-black">B</div>
           <div className="w-4 h-4 bg-slate-900 text-white flex items-center justify-center text-[10px] font-black">C</div>
         </div>
-        <span className="text-xs tracking-widest font-sans font-bold text-slate-800 group-hover/logo:text-emerald-700 transition-colors">
+        <span className="text-xs tracking-widest font-sans font-bold text-slate-800 group-hover/logo:text-[#DC8B20] transition-colors">
           STUDIOS
         </span>
       </div>
@@ -147,7 +147,7 @@ const BRAND_LOGOS: BrandItem[] = [
     category: "Haute Couture & Commercials",
     svg: (
       <div className="flex flex-col text-left">
-        <span className="font-serif tracking-[0.25em] text-sm font-black text-slate-900 group-hover/logo:text-emerald-800 transition-colors">
+        <span className="font-serif tracking-[0.25em] text-sm font-black text-slate-900 group-hover/logo:text-[#DC8B20] transition-colors">
           LVMH
         </span>
         <span className="text-[8px] tracking-widest text-slate-500 uppercase font-serif">
@@ -213,7 +213,7 @@ const BRAND_LOGOS: BrandItem[] = [
     category: "Motion Picture Group",
     svg: (
       <div className="flex flex-col text-left">
-        <span className="font-sans tracking-[0.28em] text-xs font-black text-slate-900 group-hover/logo:text-emerald-700 transition-colors">
+        <span className="font-sans tracking-[0.28em] text-xs font-black text-slate-900 group-hover/logo:text-[#DC8B20] transition-colors">
           LIONSGATE
         </span>
         <span className="text-[8px] tracking-widest text-slate-500 uppercase font-mono">Motion Pictures</span>
@@ -278,8 +278,8 @@ export default function TrustedBySection({
     <section className={`max-w-7xl mx-auto px-6 space-y-6 ${className}`}>
       {/* Subtle Cinematic Header */}
       <div className="text-center space-y-2">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-emerald-300 text-emerald-700 text-[11px] font-semibold uppercase tracking-widest shadow-2xs">
-          <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#DC8B20]/50 text-[#DC8B20] text-[11px] font-semibold uppercase tracking-widest shadow-2xs">
+          <Sparkles className="w-3.5 h-3.5 text-[#DC8B20]" />
           <span>{subtitle}</span>
         </div>
         <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 tracking-tight">

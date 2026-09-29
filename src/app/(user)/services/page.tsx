@@ -111,14 +111,14 @@ export default function ServicesPage() {
       <section className="max-w-7xl mx-auto px-6 text-center space-y-4">
         {/* <div
           data-reveal="eyebrow"
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-emerald-300 text-emerald-700 text-xs font-semibold uppercase tracking-widest shadow-xs"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#DC8B20]/50 text-[#DC8B20] text-xs font-semibold uppercase tracking-widest shadow-xs"
         >
-          <Sparkles className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
+          <Sparkles className="w-3.5 h-3.5 text-[#DC8B20] animate-pulse" />
           <span>Agency Solutions</span>
         </div> */}
         <h1
           data-reveal="heading"
-          className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight"
+          className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight"
         >
           Comprehensive Talent & Media Capabilities
         </h1>
@@ -134,7 +134,7 @@ export default function ServicesPage() {
       <section className="max-w-7xl mx-auto px-6">
         {loading && allServices.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 space-y-3">
-            <Loader2 className="w-8 h-8 text-emerald-600 animate-spin" />
+            <Loader2 className="w-8 h-8 text-[#DC8B20] animate-spin" />
             <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
               Loading Agency Capabilities...
             </span>
@@ -152,7 +152,7 @@ export default function ServicesPage() {
       <section className="max-w-7xl mx-auto px-6">
         <div
           data-reveal="fade-up"
-          className="group glass-panel bg-white p-12 rounded-3xl border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-emerald-200"
+          className="group glass-panel bg-white p-12 rounded-3xl border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-[#DC8B20]/30"
         >
           <div className="space-y-2">
             <h3
@@ -171,7 +171,7 @@ export default function ServicesPage() {
           <Link
             href="/contact"
             prefetch={true}
-            className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 hover:shadow-emerald-600/30 hover:scale-[1.02] shrink-0 transition-all duration-300"
+            className="px-6 py-3 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white font-bold text-xs shadow-md shadow-[#DC8B20]/25 hover:shadow-[#DC8B20]/25 hover:scale-[1.02] shrink-0 transition-all duration-300"
           >
             Request Consultation
           </Link>

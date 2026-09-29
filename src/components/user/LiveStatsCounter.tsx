@@ -176,7 +176,7 @@ function StatCounterCard({
           recentLiveTick ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-2 scale-90"
         }`}
       >
-        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-600 text-white text-[10px] font-bold shadow-md shadow-emerald-600/30">
+        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#DC8B20] text-white text-[10px] font-bold shadow-md shadow-[#DC8B20]/25">
           <Sparkles className="w-2.5 h-2.5 animate-spin" />
           <span>+1 LIVE</span>
         </span>
@@ -223,7 +223,7 @@ function StatCounterCard({
       </div>
 
       {/* Metric Label matching the exact screenshot design */}
-      <div className="text-xs uppercase font-extrabold tracking-wider text-slate-500 group-hover:text-emerald-700 transition-colors duration-200">
+      <div className="text-xs uppercase font-extrabold tracking-wider text-slate-500 group-hover:text-[#DC8B20] transition-colors duration-200">
         {stat.label}
       </div>
     </div>
@@ -328,11 +328,11 @@ export default function LiveStatsCounter({
         <div
           onClick={handleGlobalReRoll}
           title="Live Verified Metric Stream • Click to re-sync"
-          className="absolute top-3.5 right-5 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50/80 border border-emerald-200/60 text-emerald-800 text-[10px] font-extrabold uppercase tracking-wider cursor-pointer hover:bg-emerald-100/80 transition-colors shadow-2xs select-none"
+          className="absolute top-3.5 right-5 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#DC8B20]/10 border border-[#DC8B20]/25 text-[#915514] text-[10px] font-extrabold uppercase tracking-wider cursor-pointer hover:bg-[#DC8B20]/15 transition-colors shadow-2xs select-none"
         >
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#f1b343] opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#DC8B20]"></span>
           </span>
           <span>Live Count</span>
           <RefreshCw className="w-2.5 h-2.5 ml-0.5 opacity-60 hover:opacity-100 hover:rotate-180 transition-all duration-500" />

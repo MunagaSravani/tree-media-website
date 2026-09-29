@@ -86,7 +86,7 @@ export default function EnquiryModal({
 
         {success ? (
           <div className="py-8 text-center space-y-4">
-            <div className="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-100">
+            <div className="w-16 h-16 rounded-full bg-[#DC8B20]/10 text-[#DC8B20] flex items-center justify-center mx-auto border border-[#DC8B20]/20">
               <CheckCircle2 className="w-8 h-8" />
             </div>
             <h3 className="text-2xl font-bold text-slate-900">Form Submitted Successfully</h3>
@@ -96,7 +96,7 @@ export default function EnquiryModal({
             <div className="pt-4">
               <button
                 onClick={handleReset}
-                className="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm shadow-md shadow-emerald-600/20 transition-all"
+                className="px-6 py-2.5 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white font-semibold text-sm shadow-md shadow-[#DC8B20]/25 transition-all"
               >
                 Close Window
               </button>
@@ -105,7 +105,7 @@ export default function EnquiryModal({
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wider">
+              <span className="text-xs font-semibold text-[#DC8B20] uppercase tracking-wider">
                 Direct Agency Booking
               </span>
               <h2 className="text-xl font-bold text-slate-900 mt-1">
@@ -134,7 +134,7 @@ export default function EnquiryModal({
                   placeholder="e.g. Christopher Nolan"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none transition-colors"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none transition-colors"
                 />
               </div>
 
@@ -146,7 +146,7 @@ export default function EnquiryModal({
                   placeholder="name@production.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none transition-colors"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none transition-colors"
                 />
               </div>
             </div>
@@ -159,7 +159,7 @@ export default function EnquiryModal({
                   placeholder="+1 (555) 000-0000"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none transition-colors"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none transition-colors"
                 />
               </div>
 
@@ -170,7 +170,7 @@ export default function EnquiryModal({
                   required
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none transition-colors"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none transition-colors"
                 />
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function EnquiryModal({
                 placeholder="Describe your production timeline, shooting location, budget range, and creative scope..."
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none transition-colors resize-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none transition-colors resize-none"
               />
             </div>
 
@@ -198,7 +198,7 @@ export default function EnquiryModal({
               <button
                 type="submit"
                 disabled={loading}
-                className="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-xs font-bold shadow-md shadow-emerald-600/20 flex items-center gap-2 transition-all"
+                className="px-6 py-2.5 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] disabled:opacity-50 text-white text-xs font-bold shadow-md shadow-[#DC8B20]/25 flex items-center gap-2 transition-all"
               >
                 {loading && <Loader2 className="w-4 h-4 animate-spin" />}
                 <span>Send Booking Request</span>

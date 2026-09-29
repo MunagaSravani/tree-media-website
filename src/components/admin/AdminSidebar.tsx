@@ -65,16 +65,16 @@ export default function AdminSidebar() {
                 href={item.href}
                 className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium transition-all ${
                   isActive
-                    ? "bg-emerald-50 text-emerald-800 border border-emerald-200 font-semibold shadow-xs"
+                    ? "bg-[#DC8B20]/10 text-[#DC8B20] border border-[#DC8B20]/30 font-semibold shadow-xs"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                 }`}
               >
                 <div className="flex items-center gap-3">
-                  <Icon className={`w-4 h-4 ${isActive ? "text-emerald-700" : "text-slate-400"}`} />
+                  <Icon className={`w-4 h-4 ${isActive ? "text-[#DC8B20]" : "text-slate-400"}`} />
                   <span>{item.name}</span>
                 </div>
                 {item.badge && (
-                  <span className="px-1.5 py-0.5 text-[9px] font-bold rounded-full bg-emerald-100 text-emerald-800">
+                  <span className={`px-1.5 py-0.5 text-[9px] font-bold rounded-full ${isActive ? "bg-[#DC8B20]/20 text-[#DC8B20]" : "bg-[#DC8B20]/15 text-[#915514]"}`}>
                     {item.badge}
                   </span>
                 )}

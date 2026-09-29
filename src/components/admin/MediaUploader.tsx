@@ -68,7 +68,7 @@ export default function MediaUploader({
         <button
           type="button"
           onClick={() => setShowUrlInput(!showUrlInput)}
-          className="text-[11px] text-emerald-700 hover:text-emerald-800 flex items-center gap-1 cursor-pointer font-medium"
+          className="text-[11px] text-[#DC8B20] hover:text-[#DC8B20] flex items-center gap-1 cursor-pointer font-medium"
         >
           <LinkIcon className="w-3 h-3" />
           <span>{showUrlInput ? "Upload File" : "Paste URL"}</span>
@@ -82,12 +82,12 @@ export default function MediaUploader({
             placeholder="https://images.unsplash.com/... or /uploads/..."
             value={manualUrl}
             onChange={(e) => setManualUrl(e.target.value)}
-            className="flex-1 px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none"
+            className="flex-1 px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none"
           />
           <button
             type="button"
             onClick={handleManualUrlSubmit}
-            className="px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold cursor-pointer"
+            className="px-3 py-2 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white text-xs font-semibold cursor-pointer"
           >
             Apply
           </button>
@@ -104,11 +104,11 @@ export default function MediaUploader({
 
           <div
             onClick={() => fileInputRef.current?.click()}
-            className="cursor-pointer border-2 border-dashed border-slate-300 hover:border-emerald-500 rounded-xl p-4 text-center bg-slate-50 hover:bg-emerald-50/40 transition-colors"
+            className="cursor-pointer border-2 border-dashed border-slate-300 hover:border-[#DC8B20]/300 rounded-xl p-4 text-center bg-slate-50 hover:bg-[#DC8B20]/10 transition-colors"
           >
             {uploading ? (
               <div className="flex flex-col items-center justify-center py-2 space-y-2">
-                <Loader2 className="w-6 h-6 text-emerald-600 animate-spin" />
+                <Loader2 className="w-6 h-6 text-[#DC8B20] animate-spin" />
                 <span className="text-xs text-slate-500">Uploading media asset...</span>
               </div>
             ) : value ? (
@@ -122,13 +122,13 @@ export default function MediaUploader({
                     )}
                   </div>
                   <div className="text-left truncate">
-                    <span className="text-xs text-emerald-700 font-medium block truncate max-w-[200px]">
+                    <span className="text-xs text-[#DC8B20] font-medium block truncate max-w-[200px]">
                       {value}
                     </span>
                     <span className="text-[10px] text-slate-400">Click to replace file</span>
                   </div>
                 </div>
-                <span className="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-medium shrink-0">
+                <span className="px-2.5 py-1 rounded-lg bg-[#DC8B20]/10 text-[#DC8B20] border border-[#DC8B20]/30 text-[11px] font-medium shrink-0">
                   Replace
                 </span>
               </div>
@@ -136,7 +136,7 @@ export default function MediaUploader({
               <div className="flex flex-col items-center justify-center py-3 space-y-1.5">
                 <Upload className="w-6 h-6 text-slate-400" />
                 <p className="text-xs text-slate-600">
-                  <span className="text-emerald-700 font-semibold">Click to upload</span> or drag and drop
+                  <span className="text-[#DC8B20] font-semibold">Click to upload</span> or drag and drop
                 </p>
                 <p className="text-[10px] text-slate-400">PNG, JPG, WebP, MP4 up to 50MB</p>
               </div>

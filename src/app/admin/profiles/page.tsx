@@ -127,7 +127,7 @@ export default function AdminProfilesPage() {
                 placeholder="Search talent..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-9 pr-4 py-1.5 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none"
+                className="w-full pl-9 pr-4 py-1.5 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
 
@@ -158,20 +158,20 @@ export default function AdminProfilesPage() {
             </select>
           </div>
 
-          <Link
+          {/* <Link
             href="/admin/profiles/new"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 transition-all cursor-pointer"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white text-xs font-bold shadow-md shadow-[#DC8B20]/25 transition-all cursor-pointer"
           >
             <PlusCircle className="w-4 h-4" />
             <span>Add New Talent</span>
-          </Link>
+          </Link> */}
         </div>
 
         {/* Data Table */}
         <div className="glass-panel bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-xs">
           {loading ? (
             <div className="py-16 flex flex-col items-center justify-center space-y-2">
-              <Loader2 className="w-6 h-6 text-emerald-600 animate-spin" />
+              <Loader2 className="w-6 h-6 text-[#DC8B20] animate-spin" />
               <span className="text-xs text-slate-500">Loading talent roster...</span>
             </div>
           ) : filtered.length === 0 ? (
@@ -223,7 +223,7 @@ export default function AdminProfilesPage() {
                         onClick={() => handleToggleStatus(p.id, p.status)}
                         className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-semibold border transition-all cursor-pointer ${
                           p.status === "published"
-                            ? "bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100"
+                            ? "bg-[#DC8B20]/10 text-[#DC8B20] border-[#DC8B20]/30 hover:bg-[#DC8B20]/15"
                             : p.status === "draft"
                             ? "bg-amber-50 text-amber-800 border-amber-200 hover:bg-amber-100"
                             : "bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200"
@@ -244,7 +244,7 @@ export default function AdminProfilesPage() {
                         <Link
                           href={`/profiles/${p.slug || p.id}`}
                           target="_blank"
-                          className="p-1.5 rounded-lg text-slate-400 hover:text-emerald-700 hover:bg-slate-100 transition-colors"
+                          className="p-1.5 rounded-lg text-slate-400 hover:text-[#DC8B20] hover:bg-slate-100 transition-colors"
                           title="View on Public Website"
                         >
                           <ExternalLink className="w-3.5 h-3.5" />

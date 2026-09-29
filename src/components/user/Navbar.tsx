@@ -48,7 +48,7 @@ export default function Navbar() {
                 prefetch={true}
                 className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all ${
                   isActive
-                    ? "text-emerald-700 bg-emerald-50/80 font-semibold"
+                    ? "text-[#DC8B20] bg-[#DC8B20]/10 font-semibold"
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/80"
                 }`}
               >
@@ -86,7 +86,7 @@ export default function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
                     isActive
-                      ? "text-emerald-700 bg-emerald-50 font-semibold"
+                      ? "text-[#DC8B20] bg-[#DC8B20]/10 font-semibold"
                       : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
                   }`}
                 >

@@ -189,16 +189,15 @@ export default function TreeMediaLogo({
       {/* 2. Brand Wordmark (Reference-style Two-tier Hierarchy) */}
       {!emblemOnly && (
         <div className="flex flex-col justify-center leading-none">
-          {/* Top Tier: "TREE" in Classical Roman Serif Typography */}
+          {/* Top Tier: "TREE" in Modern Luxury Manrope Typography */}
           <span
-            className={`font-serif tracking-[0.16em] font-black uppercase transition-colors ${currentSize.textSize} ${
+            className={`tracking-[0.16em] font-black uppercase transition-colors ${currentSize.textSize} ${
               isDark
                 ? "text-white group-hover:text-amber-200"
                 : "text-slate-900 group-hover:text-amber-700"
             }`}
             style={{
-              fontFamily:
-                "'Cinzel', 'Trajan Pro', 'Cormorant Garamond', 'Times New Roman', serif",
+              fontFamily: "'Manrope', sans-serif",
               letterSpacing: "0.18em",
             }}
           >
@@ -213,14 +212,13 @@ export default function TreeMediaLogo({
                 isDark ? "bg-amber-400/80" : "bg-slate-800"
               }`}
             />
-            {/* "MEDIA" in smaller widely-spaced serif capitals */}
+            {/* "MEDIA" in clean widely-spaced Manrope capitals */}
             <span
-              className={`font-serif uppercase font-bold tracking-[0.32em] transition-colors ${currentSize.subtextSize} ${
+              className={`uppercase font-bold tracking-[0.32em] transition-colors ${currentSize.subtextSize} ${
                 isDark ? "text-amber-300/90" : "text-slate-800"
               }`}
               style={{
-                fontFamily:
-                  "'Cinzel', 'Trajan Pro', 'Cormorant Garamond', 'Times New Roman', serif",
+                fontFamily: "'Manrope', sans-serif",
                 letterSpacing: "0.32em",
               }}
             >

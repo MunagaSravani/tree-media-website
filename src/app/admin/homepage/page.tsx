@@ -88,7 +88,7 @@ export default function AdminHomepageEditor() {
       <div>
         <AdminHeader title="Homepage Editor" />
         <div className="p-16 flex flex-col items-center justify-center space-y-2">
-          <Loader2 className="w-6 h-6 text-emerald-600 animate-spin" />
+          <Loader2 className="w-6 h-6 text-[#DC8B20] animate-spin" />
           <span className="text-xs text-slate-500">Loading homepage settings...</span>
         </div>
       </div>
@@ -104,8 +104,8 @@ export default function AdminHomepageEditor() {
 
       <div className="p-8 max-w-5xl space-y-8">
         {success && (
-          <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center gap-3 text-xs text-emerald-800">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+          <div className="p-4 rounded-xl bg-[#DC8B20]/10 border border-[#DC8B20]/30 flex items-center gap-3 text-xs text-[#915514]">
+            <CheckCircle2 className="w-4 h-4 text-[#DC8B20] shrink-0" />
             <span>Homepage settings and statistics updated successfully! Live website refreshed.</span>
           </div>
         )}
@@ -114,7 +114,7 @@ export default function AdminHomepageEditor() {
           {/* Section 1: Hero Banner */}
           <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-xs space-y-5">
             <div className="flex items-center gap-2 border-b border-slate-100 pb-3">
-              <Sparkles className="w-4 h-4 text-emerald-600" />
+              <Sparkles className="w-4 h-4 text-[#DC8B20]" />
               <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
                 1. Hero Spotlight Section
               </h3>
@@ -128,7 +128,7 @@ export default function AdminHomepageEditor() {
                   required
                   value={settings.heroTitle}
                   onChange={(e) => setSettings({ ...settings, heroTitle: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                 />
               </div>
 
@@ -138,7 +138,7 @@ export default function AdminHomepageEditor() {
                   type="text"
                   value={settings.heroSubtitle || ""}
                   onChange={(e) => setSettings({ ...settings, heroSubtitle: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                 />
               </div>
 
@@ -149,7 +149,7 @@ export default function AdminHomepageEditor() {
                   required
                   value={settings.heroDescription}
                   onChange={(e) => setSettings({ ...settings, heroDescription: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none resize-none"
                 />
               </div>
 
@@ -173,7 +173,7 @@ export default function AdminHomepageEditor() {
                     type="text"
                     value={settings.heroPrimaryBtnText}
                     onChange={(e) => setSettings({ ...settings, heroPrimaryBtnText: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-emerald-600 focus:outline-none"
+                    className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-[#DC8B20] focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
@@ -182,7 +182,7 @@ export default function AdminHomepageEditor() {
                     type="text"
                     value={settings.heroPrimaryBtnLink}
                     onChange={(e) => setSettings({ ...settings, heroPrimaryBtnLink: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-emerald-600 focus:outline-none"
+                    className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-[#DC8B20] focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
@@ -191,7 +191,7 @@ export default function AdminHomepageEditor() {
                     type="text"
                     value={settings.heroSecondaryBtnText}
                     onChange={(e) => setSettings({ ...settings, heroSecondaryBtnText: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-emerald-600 focus:outline-none"
+                    className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-[#DC8B20] focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
@@ -200,7 +200,7 @@ export default function AdminHomepageEditor() {
                     type="text"
                     value={settings.heroSecondaryBtnLink}
                     onChange={(e) => setSettings({ ...settings, heroSecondaryBtnLink: e.target.value })}
-                    className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-emerald-600 focus:outline-none"
+                    className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-[#DC8B20] focus:outline-none"
                   />
                 </div>
               </div>
@@ -222,7 +222,7 @@ export default function AdminHomepageEditor() {
                       type="text"
                       value={stat.value}
                       onChange={(e) => handleStatChange(idx, "value", e.target.value)}
-                      className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-sm font-bold text-emerald-700 focus:border-emerald-600 focus:outline-none"
+                      className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-sm font-bold text-[#DC8B20] focus:border-[#DC8B20] focus:outline-none"
                     />
                   </div>
                   <div className="space-y-1">
@@ -231,7 +231,7 @@ export default function AdminHomepageEditor() {
                       type="text"
                       value={stat.label}
                       onChange={(e) => handleStatChange(idx, "label", e.target.value)}
-                      className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-slate-800 focus:border-emerald-600 focus:outline-none"
+                      className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-slate-800 focus:border-[#DC8B20] focus:outline-none"
                     />
                   </div>
                   <label className="flex items-center gap-2 pt-1 text-[11px] text-slate-600">
@@ -239,7 +239,7 @@ export default function AdminHomepageEditor() {
                       type="checkbox"
                       checked={stat.isActive}
                       onChange={(e) => handleStatChange(idx, "isActive", e.target.checked)}
-                      className="rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
+                      className="rounded border-slate-300 text-[#DC8B20] focus:ring-[#DC8B20]"
                     />
                     <span>Active</span>
                   </label>
@@ -262,7 +262,7 @@ export default function AdminHomepageEditor() {
                   required
                   value={settings.aboutHeading}
                   onChange={(e) => setSettings({ ...settings, aboutHeading: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                 />
               </div>
 
@@ -273,7 +273,7 @@ export default function AdminHomepageEditor() {
                   required
                   value={settings.aboutDescription}
                   onChange={(e) => setSettings({ ...settings, aboutDescription: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none resize-none"
                 />
               </div>
 
@@ -300,7 +300,7 @@ export default function AdminHomepageEditor() {
                     required
                     value={settings.ctaHeading}
                     onChange={(e) => setSettings({ ...settings, ctaHeading: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                   />
                 </div>
 
@@ -311,7 +311,7 @@ export default function AdminHomepageEditor() {
                     required
                     value={settings.ctaBtnText}
                     onChange={(e) => setSettings({ ...settings, ctaBtnText: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                   />
                 </div>
               </div>
@@ -323,7 +323,7 @@ export default function AdminHomepageEditor() {
                   required
                   value={settings.ctaDescription}
                   onChange={(e) => setSettings({ ...settings, ctaDescription: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none resize-none"
                 />
               </div>
 
@@ -343,7 +343,7 @@ export default function AdminHomepageEditor() {
             <button
               type="submit"
               disabled={saving}
-              className="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 flex items-center gap-2 transition-all disabled:opacity-50"
+              className="px-6 py-2.5 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white text-xs font-bold shadow-md shadow-[#DC8B20]/25 flex items-center gap-2 transition-all disabled:opacity-50"
             >
               {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
               <span>Save Homepage Updates</span>

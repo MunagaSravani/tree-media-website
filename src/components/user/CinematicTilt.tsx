@@ -87,7 +87,7 @@ export default function CinematicTilt({
         <div
           aria-hidden="true"
           style={glareStyle}
-          className="pointer-events-none absolute w-[220%] h-[220%] rounded-full -translate-x-1/2 -translate-y-1/2 bg-radial from-white/25 via-emerald-400/10 to-transparent mix-blend-overlay z-20"
+          className="pointer-events-none absolute w-[220%] h-[220%] rounded-full -translate-x-1/2 -translate-y-1/2 bg-radial from-white/25 via-[#DC8B20]/15 to-transparent mix-blend-overlay z-20"
         />
       )}
     </div>

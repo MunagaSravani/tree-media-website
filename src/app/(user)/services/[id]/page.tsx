@@ -111,9 +111,9 @@ export default async function ServiceDetailPage({
       <section className="space-y-6">
         <div
           data-reveal="eyebrow"
-          className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold uppercase tracking-wider"
+          className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#DC8B20]/10 border border-[#DC8B20]/30 text-[#DC8B20] text-xs font-semibold uppercase tracking-wider"
         >
-          <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+          <Sparkles className="w-3.5 h-3.5 text-[#DC8B20]" />
           <span>Agency Division</span>
         </div>
 
@@ -175,7 +175,7 @@ export default async function ServiceDetailPage({
             <ul data-reveal="stagger" className="space-y-2.5 text-xs text-slate-700">
               {deliverables.map((item, idx) => (
                 <li key={idx} className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#DC8B20] shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -188,10 +188,10 @@ export default async function ServiceDetailPage({
           <div
             data-reveal="fade-up"
             data-reveal-delay="150"
-            className="glass-panel bg-white p-6 rounded-3xl border border-emerald-200 shadow-md space-y-5 sticky top-28"
+            className="glass-panel bg-white p-6 rounded-3xl border border-[#DC8B20]/30 shadow-md space-y-5 sticky top-28"
           >
             <div>
-              <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider block">
+              <span className="text-xs font-bold text-[#DC8B20] uppercase tracking-wider block">
                 Direct Booking
               </span>
               <h3 className="text-lg font-bold text-slate-900 mt-1">Engage This Service</h3>
@@ -204,7 +204,7 @@ export default async function ServiceDetailPage({
               <Link
                 href={`/contact?serviceId=${svc.id}`}
                 prefetch={true}
-                className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 flex items-center justify-center gap-2 transition-all"
+                className="w-full py-3 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white font-bold text-xs shadow-md shadow-[#DC8B20]/25 flex items-center justify-center gap-2 transition-all"
               >
                 <span>Request Service Quote</span>
                 <ArrowRight className="w-4 h-4" />

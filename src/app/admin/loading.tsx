@@ -10,7 +10,7 @@ export default function AdminLoading() {
           <div className="h-4 w-72 rounded-lg bg-slate-200/50 animate-pulse" />
         </div>
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full border-2 border-slate-200 border-t-emerald-600 animate-spin" />
+          <div className="w-8 h-8 rounded-full border-2 border-slate-200 border-t-[#DC8B20] animate-spin" />
           <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
             Loading...
           </span>

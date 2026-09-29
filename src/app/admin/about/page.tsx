@@ -119,7 +119,7 @@ export default function AdminAboutEditor() {
       <div>
         <AdminHeader title="About Page Editor" />
         <div className="p-16 flex justify-center">
-          <Loader2 className="w-6 h-6 text-emerald-600 animate-spin" />
+          <Loader2 className="w-6 h-6 text-[#DC8B20] animate-spin" />
         </div>
       </div>
     );
@@ -134,8 +134,8 @@ export default function AdminAboutEditor() {
 
       <div className="p-8 max-w-5xl space-y-8">
         {success && (
-          <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center gap-3 text-xs text-emerald-800">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+          <div className="p-4 rounded-xl bg-[#DC8B20]/10 border border-[#DC8B20]/30 flex items-center gap-3 text-xs text-[#915514]">
+            <CheckCircle2 className="w-4 h-4 text-[#DC8B20] shrink-0" />
             <span>About Page content updated successfully! Live website refreshed.</span>
           </div>
         )}
@@ -156,7 +156,7 @@ export default function AdminAboutEditor() {
                     required
                     value={content.introTitle}
                     onChange={(e) => setContent({ ...content, introTitle: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                   />
                 </div>
 
@@ -167,7 +167,7 @@ export default function AdminAboutEditor() {
                     required
                     value={content.storyTitle}
                     onChange={(e) => setContent({ ...content, storyTitle: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                   />
                 </div>
               </div>
@@ -179,7 +179,7 @@ export default function AdminAboutEditor() {
                   required
                   value={content.introText}
                   onChange={(e) => setContent({ ...content, introText: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none resize-none"
                 />
               </div>
 
@@ -190,7 +190,7 @@ export default function AdminAboutEditor() {
                   required
                   value={content.storyText}
                   onChange={(e) => setContent({ ...content, storyText: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none resize-none"
                 />
               </div>
             </div>
@@ -204,24 +204,24 @@ export default function AdminAboutEditor() {
 
             <div className="grid grid-cols-2 gap-6">
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-emerald-700">Our Mission *</label>
+                <label className="text-xs font-semibold text-[#DC8B20]">Our Mission *</label>
                 <textarea
                   rows={3}
                   required
                   value={content.mission}
                   onChange={(e) => setContent({ ...content, mission: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none resize-none"
                 />
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-teal-700">Our Vision *</label>
+                <label className="text-xs font-semibold text-[#DC8B20]">Our Vision *</label>
                 <textarea
                   rows={3}
                   required
                   value={content.vision}
                   onChange={(e) => setContent({ ...content, vision: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none resize-none"
                 />
               </div>
             </div>
@@ -236,7 +236,7 @@ export default function AdminAboutEditor() {
               <button
                 type="button"
                 onClick={handleAddValue}
-                className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold hover:bg-emerald-100 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#DC8B20]/10 border border-[#DC8B20]/30 text-[#DC8B20] text-xs font-semibold hover:bg-[#DC8B20]/15 transition-colors"
               >
                 <Plus className="w-3.5 h-3.5" />
                 <span>Add Value</span>
@@ -260,7 +260,7 @@ export default function AdminAboutEditor() {
                       type="text"
                       value={v.title}
                       onChange={(e) => handleValueChange(i, "title", e.target.value)}
-                      className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-slate-900 focus:border-emerald-600 focus:outline-none"
+                      className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-slate-900 focus:border-[#DC8B20] focus:outline-none"
                     />
                   </div>
 
@@ -270,7 +270,7 @@ export default function AdminAboutEditor() {
                       rows={2}
                       value={v.description}
                       onChange={(e) => handleValueChange(i, "description", e.target.value)}
-                      className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-slate-900 focus:border-emerald-600 focus:outline-none resize-none"
+                      className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-slate-900 focus:border-[#DC8B20] focus:outline-none resize-none"
                     />
                   </div>
                 </div>
@@ -287,7 +287,7 @@ export default function AdminAboutEditor() {
               <button
                 type="button"
                 onClick={handleAddAchievement}
-                className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold hover:bg-emerald-100 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#DC8B20]/10 border border-[#DC8B20]/30 text-[#DC8B20] text-xs font-semibold hover:bg-[#DC8B20]/15 transition-colors"
               >
                 <Plus className="w-3.5 h-3.5" />
                 <span>Add Milestone</span>
@@ -312,7 +312,7 @@ export default function AdminAboutEditor() {
                         type="text"
                         value={ach.year}
                         onChange={(e) => handleAchievementChange(i, "year", e.target.value)}
-                        className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-emerald-700 font-bold focus:border-emerald-600 focus:outline-none"
+                        className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-[#DC8B20] font-bold focus:border-[#DC8B20] focus:outline-none"
                       />
                     </div>
                     <div className="col-span-2 space-y-1">
@@ -321,7 +321,7 @@ export default function AdminAboutEditor() {
                         type="text"
                         value={ach.title}
                         onChange={(e) => handleAchievementChange(i, "title", e.target.value)}
-                        className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-slate-900 focus:border-emerald-600 focus:outline-none"
+                        className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-slate-900 focus:border-[#DC8B20] focus:outline-none"
                       />
                     </div>
                   </div>
@@ -332,7 +332,7 @@ export default function AdminAboutEditor() {
                       rows={2}
                       value={ach.description}
                       onChange={(e) => handleAchievementChange(i, "description", e.target.value)}
-                      className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-slate-900 focus:border-emerald-600 focus:outline-none resize-none"
+                      className="w-full px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-slate-900 focus:border-[#DC8B20] focus:outline-none resize-none"
                     />
                   </div>
                 </div>
@@ -348,7 +348,7 @@ export default function AdminAboutEditor() {
             <button
               type="submit"
               disabled={saving}
-              className="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 flex items-center gap-2 transition-all disabled:opacity-50"
+              className="px-6 py-2.5 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white text-xs font-bold shadow-md shadow-[#DC8B20]/25 flex items-center gap-2 transition-all disabled:opacity-50"
             >
               {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
               <span>Save About Page</span>

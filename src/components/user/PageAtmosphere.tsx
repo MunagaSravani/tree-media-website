@@ -35,7 +35,7 @@ const THEME_CONFIGS: Record<PageAtmosphereVariant, PageThemeConfig> = {
     photoUrl: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?q=80&w=2000&auto=format&fit=crop",
     photoAlt: "Cinematic Soundstage with Lighting Grid",
     photoOpacity: "opacity-15",
-    primaryGlow: "rgba(16, 185, 129, 0.14)", // Tree Media Emerald
+    primaryGlow: "rgba(220, 139, 32, 0.14)", // Tree Media Emerald
     secondaryGlow: "rgba(217, 140, 25, 0.12)", // Warm Gala Amber
     accentGlow: "rgba(8, 145, 178, 0.08)", // Cyan flare
     subtitle: "2.39:1 CINEMASCOPE • SOUNDSTAGE 01",
@@ -46,7 +46,7 @@ const THEME_CONFIGS: Record<PageAtmosphereVariant, PageThemeConfig> = {
     photoAlt: "Modern Cinema Studio & Casting Architecture",
     photoOpacity: "opacity-14",
     primaryGlow: "rgba(180, 83, 9, 0.14)", // Archival Gold
-    secondaryGlow: "rgba(5, 150, 105, 0.11)", // Deep Heritage Emerald
+    secondaryGlow: "rgba(220, 139, 32, 0.11)", // Deep Heritage Emerald
     accentGlow: "rgba(71, 85, 105, 0.08)", // Studio Slate
     subtitle: "MODERN TALENT AGENCY • CONTEMPORARY MEDIA",
     codeBadge: "AGENCY & VISION",
@@ -56,7 +56,7 @@ const THEME_CONFIGS: Record<PageAtmosphereVariant, PageThemeConfig> = {
     photoAlt: "8K Cinema Camera & Production Setup",
     photoOpacity: "opacity-14",
     primaryGlow: "rgba(8, 145, 178, 0.15)", // Studio Teal
-    secondaryGlow: "rgba(16, 185, 129, 0.13)", // Electric Emerald
+    secondaryGlow: "rgba(220, 139, 32, 0.13)", // Electric Emerald
     accentGlow: "rgba(139, 92, 246, 0.08)", // Gaffer Violet Gel
     subtitle: "8K SENSOR HUD • 50MM T1.3 PRIME • 24.000 FPS",
     codeBadge: "PRODUCTION CAPABILITIES",
@@ -66,7 +66,7 @@ const THEME_CONFIGS: Record<PageAtmosphereVariant, PageThemeConfig> = {
     photoAlt: "Spotlight on Casting Stage Floor",
     photoOpacity: "opacity-16",
     primaryGlow: "rgba(245, 158, 11, 0.18)", // Radiant Stage Amber
-    secondaryGlow: "rgba(16, 185, 129, 0.12)", // Emerald Cue
+    secondaryGlow: "rgba(220, 139, 32, 0.12)", // Emerald Cue
     accentGlow: "rgba(239, 68, 68, 0.09)", // Tally REC Red
     subtitle: "LIVE CASTING CALL • STAGE POOL • 1.85:1 FLAT",
     codeBadge: "AUDITIONS DISCOVERY",
@@ -86,7 +86,7 @@ const THEME_CONFIGS: Record<PageAtmosphereVariant, PageThemeConfig> = {
     photoAlt: "Editorial Portrait Studio Cyclorama",
     photoOpacity: "opacity-14",
     primaryGlow: "rgba(244, 63, 94, 0.12)", // Editorial Rose-Gold
-    secondaryGlow: "rgba(5, 150, 105, 0.12)", // Emerald Jade
+    secondaryGlow: "rgba(220, 139, 32, 0.12)", // Emerald Jade
     accentGlow: "rgba(251, 146, 60, 0.10)", // Soft Peach Prism
     subtitle: "CYCLORAMA STUDIO • 4:5 EDITORIAL • KEY LIGHT 5600K",
     codeBadge: "TALENT DIRECTORY",
@@ -106,7 +106,7 @@ const THEME_CONFIGS: Record<PageAtmosphereVariant, PageThemeConfig> = {
     photoAlt: "Executive Beverly Hills Studio Penthouse Architecture",
     photoOpacity: "opacity-13",
     primaryGlow: "rgba(37, 99, 235, 0.12)", // Studio Sapphire
-    secondaryGlow: "rgba(5, 150, 105, 0.11)", // Authority Emerald
+    secondaryGlow: "rgba(220, 139, 32, 0.11)", // Authority Emerald
     accentGlow: "rgba(148, 163, 184, 0.09)", // Platinum
     subtitle: "EXECUTIVE SUITE • STUDIO NETWORK • GLOBAL DISTRIBUTION",
     codeBadge: "STUDIO PARTNERS",
@@ -117,7 +117,7 @@ const THEME_CONFIGS: Record<PageAtmosphereVariant, PageThemeConfig> = {
     photoOpacity: "opacity-15",
     primaryGlow: "rgba(217, 140, 25, 0.18)", // 24K Gala Gold
     secondaryGlow: "rgba(251, 191, 36, 0.12)", // Champagne Sparkle
-    accentGlow: "rgba(5, 150, 105, 0.10)", // Emerald Ribbon
+    accentGlow: "rgba(220, 139, 32, 0.10)", // Emerald Ribbon
     subtitle: "FILM FESTIVAL OVATION • GOLDEN LAUREL • CRITICS ACCLAIM",
     codeBadge: "PRODUCER TRUST",
   },
@@ -126,7 +126,7 @@ const THEME_CONFIGS: Record<PageAtmosphereVariant, PageThemeConfig> = {
     photoAlt: "Luxury Agency VIP Green Room & Modern Studio Lounge",
     photoOpacity: "opacity-14",
     primaryGlow: "rgba(217, 140, 25, 0.13)", // Warm Amber Sconce
-    secondaryGlow: "rgba(16, 185, 129, 0.12)", // Agency Emerald
+    secondaryGlow: "rgba(220, 139, 32, 0.12)", // Agency Emerald
     accentGlow: "rgba(225, 29, 72, 0.08)", // Terracotta Warmth
     subtitle: "VIP GREEN ROOM • DIRECT AGENT BOOKING • BEVERLY HILLS",
     codeBadge: "HEADQUARTERS",
@@ -196,7 +196,7 @@ export default function PageAtmosphere({ variant, className = "" }: PageAtmosphe
       {/* 4. LAYER FOUR: 3D Floating Cinematic Dust & Bokeh Accents */}
       <div className="absolute top-24 left-[15%] w-3 h-3 rounded-full bg-amber-400/30 blur-[1px] animate-float-drift" />
       <div
-        className="absolute top-48 right-[20%] w-4 h-4 rounded-full bg-emerald-400/25 blur-[2px] animate-float-drift"
+        className="absolute top-48 right-[20%] w-4 h-4 rounded-full bg-[#DC8B20]/20 blur-[2px] animate-float-drift"
         style={{ animationDelay: "4s", animationDuration: "16s" }}
       />
       <div
@@ -212,7 +212,7 @@ export default function PageAtmosphere({ variant, className = "" }: PageAtmosphe
       {/* Left Margin: 35mm Celluloid Frame Edge Indicators */}
       <div className="hidden xl:flex absolute top-28 left-4 flex-col gap-6 text-[9px] font-mono tracking-widest text-slate-400/60 uppercase select-none">
         <div className="flex items-center gap-1.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/50" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#DC8B20]/20" />
           <span>{config.codeBadge}</span>
         </div>
         <div className="border-l border-slate-300/60 pl-2 space-y-1 text-[8px] text-slate-400/50">
@@ -278,7 +278,7 @@ export default function PageAtmosphere({ variant, className = "" }: PageAtmosphe
               <span>SENSOR: FULL-FRAME 36x24MM</span>
               <span>LUT: TREE_MEDIA_FILM_V4</span>
             </div>
-            <div className="flex justify-between items-end text-[9px] font-mono text-emerald-800">
+            <div className="flex justify-between items-end text-[9px] font-mono text-[#915514]">
               <span>COLOR GEL: 06B6D4 / 10B981</span>
               <span>AUDIO: -12.4 dB FS</span>
             </div>
@@ -314,7 +314,7 @@ export default function PageAtmosphere({ variant, className = "" }: PageAtmosphe
       {variant === "contact" && (
         <div className="absolute top-20 right-12 opacity-35 pointer-events-none">
           <div className="px-3 py-1 rounded-md border border-amber-600/40 bg-amber-500/10 text-amber-800 text-[10px] font-mono tracking-widest uppercase flex items-center gap-1.5 shadow-xs">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[#DC8B20] animate-pulse" />
             <span>AGENCY LINE ACTIVE • PST</span>
           </div>
         </div>

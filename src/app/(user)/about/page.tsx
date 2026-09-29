@@ -44,15 +44,15 @@ export default async function AboutPage() {
       <section className="max-w-7xl mx-auto px-6 text-center space-y-5">
         {/* <div
           data-reveal="eyebrow"
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-emerald-300 text-emerald-700 text-xs font-semibold uppercase tracking-widest shadow-xs"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#DC8B20]/50 text-[#DC8B20] text-xs font-semibold uppercase tracking-widest shadow-xs"
         >
-          <Sparkles className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
+          <Sparkles className="w-3.5 h-3.5 text-[#DC8B20] animate-pulse" />
           <span>Agency Vision & Philosophy</span>
         </div> */}
 
         <h1
           data-reveal="heading"
-          className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight max-w-4xl mx-auto leading-[1.1]"
+          className="text-4xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight max-w-4xl mx-auto leading-[1.1]"
         >
           {content?.introTitle || "Empowering Next-Generation Talent & Creative Media"}
         </h1>
@@ -73,7 +73,7 @@ export default async function AboutPage() {
             <div className="space-y-2">
               <span
                 data-reveal="eyebrow"
-                className="text-xs font-semibold text-emerald-700 uppercase tracking-wider block"
+                className="text-xs font-semibold text-[#DC8B20] uppercase tracking-wider block"
               >
                 Our Journey
               </span>
@@ -96,13 +96,13 @@ export default async function AboutPage() {
             <div
               data-reveal="fade-up"
               data-reveal-delay="150"
-              className="group p-6 rounded-3xl glass-panel bg-white border border-slate-200/90 hover:border-emerald-300 hover:shadow-md transition-all duration-300 space-y-2 relative overflow-hidden"
+              className="group p-6 rounded-3xl glass-panel bg-white border border-slate-200/90 hover:border-[#DC8B20]/50 hover:shadow-md transition-all duration-300 space-y-2 relative overflow-hidden"
             >
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-100/80 text-emerald-700 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 shadow-2xs">
+                <div className="w-9 h-9 rounded-xl bg-[#DC8B20]/10 border border-[#DC8B20]/20/80 text-[#DC8B20] flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:bg-[#DC8B20] group-hover:text-white transition-all duration-300 shadow-2xs">
                   <Award className="w-4 h-4" />
                 </div>
-                <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider block">
+                <span className="text-xs font-bold text-[#DC8B20] uppercase tracking-wider block">
                   {content?.experienceYears ? `${content.experienceYears}+ Years of Industry Excellence` : "Next-Generation Industry Leadership"}
                 </span>
               </div>
@@ -118,7 +118,7 @@ export default async function AboutPage() {
             data-reveal-delay="200"
             className="col-span-12 lg:col-span-6 grid grid-cols-2 gap-5"
           >
-            <div className="group rounded-3xl overflow-hidden glass-panel bg-slate-950 border border-slate-200/80 aspect-[3/4] shadow-md hover:shadow-xl hover:border-emerald-300/60 transition-all duration-500 relative shine-sweep">
+            <div className="group rounded-3xl overflow-hidden glass-panel bg-slate-950 border border-slate-200/80 aspect-[3/4] shadow-md hover:shadow-xl hover:border-[#DC8B20]/50 transition-all duration-500 relative shine-sweep">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop"
                 alt="Agency Boardroom"
@@ -132,7 +132,7 @@ export default async function AboutPage() {
                 </span>
               </div>
             </div>
-            <div className="group rounded-3xl overflow-hidden glass-panel bg-slate-950 border border-slate-200/80 aspect-[3/4] shadow-md hover:shadow-xl hover:border-emerald-300/60 transition-all duration-500 mt-8 relative shine-sweep">
+            <div className="group rounded-3xl overflow-hidden glass-panel bg-slate-950 border border-slate-200/80 aspect-[3/4] shadow-md hover:shadow-xl hover:border-[#DC8B20]/50 transition-all duration-500 mt-8 relative shine-sweep">
               <img
                 src="https://images.unsplash.com/photo-1716703371653-ca74beaa7a4a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Talent Shoot"
@@ -156,17 +156,17 @@ export default async function AboutPage() {
           <div
             data-reveal="fade-up"
             data-reveal-delay="100"
-            className="group relative rounded-3xl p-8 sm:p-10 glass-panel bg-white border border-slate-200/80 hover:border-emerald-400/50 shadow-xs hover:shadow-xl hover:shadow-emerald-900/5 hover:-translate-y-1.5 transition-all duration-400 ease-out overflow-hidden flex flex-col justify-between space-y-6"
+            className="group relative rounded-3xl p-8 sm:p-10 glass-panel bg-white border border-slate-200/80 hover:border-[#DC8B20]/50 shadow-xs hover:shadow-xl hover:shadow-[#DC8B20]/25 hover:-translate-y-1.5 transition-all duration-400 ease-out overflow-hidden flex flex-col justify-between space-y-6"
           >
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-700 border border-emerald-100 flex items-center justify-center group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 shadow-2xs">
+              <div className="w-12 h-12 rounded-2xl bg-[#DC8B20]/10 text-[#DC8B20] border border-[#DC8B20]/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#DC8B20] group-hover:text-white transition-all duration-300 shadow-2xs">
                 <Target className="w-6 h-6" />
               </div>
               <div className="space-y-2">
-                <span className="text-[11px] font-bold text-emerald-700 uppercase tracking-widest block">
+                <span className="text-[11px] font-bold text-[#DC8B20] uppercase tracking-widest block">
                   Core Purpose
                 </span>
-                <h3 className="text-2xl font-bold text-slate-900 tracking-tight group-hover:text-emerald-700 transition-colors duration-200">
+                <h3 className="text-2xl font-bold text-slate-900 tracking-tight group-hover:text-[#DC8B20] transition-colors duration-200">
                   Our Mission
                 </h3>
               </div>
@@ -180,17 +180,17 @@ export default async function AboutPage() {
           <div
             data-reveal="fade-up"
             data-reveal-delay="200"
-            className="group relative rounded-3xl p-8 sm:p-10 glass-panel bg-white border border-slate-200/80 hover:border-teal-400/50 shadow-xs hover:shadow-xl hover:shadow-teal-900/5 hover:-translate-y-1.5 transition-all duration-400 ease-out overflow-hidden flex flex-col justify-between space-y-6"
+            className="group relative rounded-3xl p-8 sm:p-10 glass-panel bg-white border border-slate-200/80 hover:border-[#DC8B20]/50 shadow-xs hover:shadow-xl hover:shadow-[#DC8B20]/25 hover:-translate-y-1.5 transition-all duration-400 ease-out overflow-hidden flex flex-col justify-between space-y-6"
           >
             <div className="space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-700 border border-teal-100 flex items-center justify-center group-hover:scale-110 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 shadow-2xs">
+              <div className="w-12 h-12 rounded-2xl bg-teal-50 text-[#DC8B20] border border-teal-100 flex items-center justify-center group-hover:scale-110 group-hover:bg-[#DC8B20] group-hover:text-white transition-all duration-300 shadow-2xs">
                 <Globe className="w-6 h-6" />
               </div>
               <div className="space-y-2">
-                <span className="text-[11px] font-bold text-teal-700 uppercase tracking-widest block">
+                <span className="text-[11px] font-bold text-[#DC8B20] uppercase tracking-widest block">
                   Future Horizon
                 </span>
-                <h3 className="text-2xl font-bold text-slate-900 tracking-tight group-hover:text-teal-700 transition-colors duration-200">
+                <h3 className="text-2xl font-bold text-slate-900 tracking-tight group-hover:text-[#DC8B20] transition-colors duration-200">
                   Our Vision
                 </h3>
               </div>
@@ -208,7 +208,7 @@ export default async function AboutPage() {
         <div className="text-center max-w-xl mx-auto space-y-2">
           <span
             data-reveal="eyebrow"
-            className="text-xs font-semibold text-emerald-700 uppercase tracking-wider block"
+            className="text-xs font-semibold text-[#DC8B20] uppercase tracking-wider block"
           >
             Our Foundation
           </span>
@@ -226,12 +226,12 @@ export default async function AboutPage() {
             return (
               <div
                 key={idx}
-                className="group glass-panel bg-white p-6 rounded-3xl border border-slate-200/80 hover:border-emerald-400/50 hover:shadow-lg hover:shadow-emerald-950/5 hover:-translate-y-1.5 transition-all duration-400 ease-out space-y-3 shadow-xs"
+                className="group glass-panel bg-white p-6 rounded-3xl border border-slate-200/80 hover:border-[#DC8B20]/50 hover:shadow-lg hover:shadow-[#DC8B20]/25 hover:-translate-y-1.5 transition-all duration-400 ease-out space-y-3 shadow-xs"
               >
-                <div className="w-11 h-11 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-700 flex items-center justify-center group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 shadow-2xs">
+                <div className="w-11 h-11 rounded-2xl bg-[#DC8B20]/10 border border-[#DC8B20]/20 text-[#DC8B20] flex items-center justify-center group-hover:scale-110 group-hover:bg-[#DC8B20] group-hover:text-white transition-all duration-300 shadow-2xs">
                   <IconComponent className="w-5 h-5" />
                 </div>
-                <h3 className="text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors duration-200">
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-[#DC8B20] transition-colors duration-200">
                   {val.title}
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
@@ -248,7 +248,7 @@ export default async function AboutPage() {
         <div className="text-center max-w-xl mx-auto space-y-2">
           <span
             data-reveal="eyebrow"
-            className="text-xs font-semibold text-emerald-700 uppercase tracking-wider block"
+            className="text-xs font-semibold text-[#DC8B20] uppercase tracking-wider block"
           >
             Agency Milestones
           </span>
@@ -264,15 +264,15 @@ export default async function AboutPage() {
           {achievementsList.map((ach: any, idx: number) => (
             <div
               key={idx}
-              className="group glass-panel bg-white p-6 rounded-3xl border border-slate-200/80 hover:border-emerald-400/50 hover:shadow-lg hover:shadow-emerald-950/5 hover:-translate-y-1.5 transition-all duration-400 ease-out relative space-y-3 shadow-xs"
+              className="group glass-panel bg-white p-6 rounded-3xl border border-slate-200/80 hover:border-[#DC8B20]/50 hover:shadow-lg hover:shadow-[#DC8B20]/25 hover:-translate-y-1.5 transition-all duration-400 ease-out relative space-y-3 shadow-xs"
             >
               <div className="flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full text-xs font-black font-mono tracking-tight bg-emerald-50 text-emerald-700 border border-emerald-200/80 group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600 transition-all duration-300 shadow-2xs">
+                <span className="px-3 py-1 rounded-full text-xs font-black font-mono tracking-tight bg-[#DC8B20]/10 text-[#DC8B20] border border-[#DC8B20]/25 group-hover:bg-[#DC8B20] group-hover:text-white group-hover:border-[#DC8B20] transition-all duration-300 shadow-2xs">
                   {ach.year}
                 </span>
-                <div className="w-2 h-2 rounded-full bg-emerald-400/40 group-hover:bg-emerald-500 transition-colors duration-300" />
+                <div className="w-2 h-2 rounded-full bg-[#DC8B20]/20 group-hover:bg-[#DC8B20] transition-colors duration-300" />
               </div>
-              <h3 className="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition-colors duration-200">
+              <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#DC8B20] transition-colors duration-200">
                 {ach.title}
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -287,7 +287,7 @@ export default async function AboutPage() {
       <section className="max-w-7xl mx-auto px-6 text-center">
         <div
           data-reveal="fade-up"
-          className="group glass-panel bg-white p-10 sm:p-12 rounded-3xl border border-slate-200/90 hover:border-emerald-300/70 hover:shadow-lg transition-all duration-300 space-y-4 max-w-3xl mx-auto shadow-xs"
+          className="group glass-panel bg-white p-10 sm:p-12 rounded-3xl border border-slate-200/90 hover:border-[#DC8B20]/50 hover:shadow-lg transition-all duration-300 space-y-4 max-w-3xl mx-auto shadow-xs"
         >
           <h3
             data-reveal="heading"
@@ -305,7 +305,7 @@ export default async function AboutPage() {
             <Link
               href="/contact"
               prefetch={true}
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-98 text-white font-bold text-xs shadow-md shadow-emerald-600/20 hover:shadow-emerald-600/30 hover:-translate-y-0.5 transition-all duration-300 group/btn cursor-pointer"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] active:scale-98 text-white font-bold text-xs shadow-md shadow-[#DC8B20]/25 hover:shadow-[#DC8B20]/25 hover:-translate-y-0.5 transition-all duration-300 group/btn cursor-pointer"
             >
               <span>Contact Our Agents</span>
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />

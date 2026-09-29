@@ -125,7 +125,7 @@ export default function AdminServicesPage() {
           </span>
           <button
             onClick={handleStartNew}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 transition-all cursor-pointer"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white text-xs font-bold shadow-md shadow-[#DC8B20]/25 transition-all cursor-pointer"
           >
             <PlusCircle className="w-4 h-4" />
             <span>Add New Service</span>
@@ -160,7 +160,7 @@ export default function AdminServicesPage() {
                         const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
                         setEditingItem({ ...editingItem, title, slug: isNew ? slug : editingItem.slug });
                       }}
-                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                     />
                   </div>
 
@@ -171,7 +171,7 @@ export default function AdminServicesPage() {
                       required
                       value={editingItem.slug}
                       onChange={(e) => setEditingItem({ ...editingItem, slug: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-emerald-700 font-mono text-sm focus:border-emerald-600 focus:outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#DC8B20] font-mono text-sm focus:border-[#DC8B20] focus:outline-none"
                     />
                   </div>
                 </div>
@@ -183,7 +183,7 @@ export default function AdminServicesPage() {
                     required
                     value={editingItem.shortDescription}
                     onChange={(e) => setEditingItem({ ...editingItem, shortDescription: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                   />
                 </div>
 
@@ -194,7 +194,7 @@ export default function AdminServicesPage() {
                     required
                     value={editingItem.detailedContent}
                     onChange={(e) => setEditingItem({ ...editingItem, detailedContent: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none resize-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none resize-none"
                   />
                 </div>
 
@@ -211,7 +211,7 @@ export default function AdminServicesPage() {
                       type="number"
                       value={editingItem.displayOrder}
                       onChange={(e) => setEditingItem({ ...editingItem, displayOrder: Number(e.target.value) })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                     />
                   </div>
 
@@ -220,7 +220,7 @@ export default function AdminServicesPage() {
                     <select
                       value={editingItem.status}
                       onChange={(e) => setEditingItem({ ...editingItem, status: e.target.value as any })}
-                      className="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                      className="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                     >
                       <option value="published">Published</option>
                       <option value="draft">Draft</option>
@@ -240,7 +240,7 @@ export default function AdminServicesPage() {
                   <button
                     type="submit"
                     disabled={saving}
-                    className="px-6 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-2 shadow-md shadow-emerald-600/20 cursor-pointer"
+                    className="px-6 py-2 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white text-xs font-bold flex items-center gap-2 shadow-md shadow-[#DC8B20]/25 cursor-pointer"
                   >
                     {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                     <span>Save Service</span>
@@ -255,7 +255,7 @@ export default function AdminServicesPage() {
         <div className="grid grid-cols-3 gap-6">
           {loading ? (
             <div className="col-span-3 py-12 flex justify-center">
-              <Loader2 className="w-6 h-6 text-emerald-600 animate-spin" />
+              <Loader2 className="w-6 h-6 text-[#DC8B20] animate-spin" />
             </div>
           ) : (
             services.map((s) => (
@@ -276,7 +276,7 @@ export default function AdminServicesPage() {
                       <span
                         className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold border capitalize ${
                           s.status === "published"
-                            ? "bg-emerald-50 text-emerald-700 border-emerald-200"
+                            ? "bg-[#DC8B20]/10 text-[#DC8B20] border-[#DC8B20]/30"
                             : "bg-amber-50 text-amber-800 border-amber-200"
                         }`}
                       >

@@ -31,8 +31,8 @@ export default function AdminHeader({ title, subtitle }: AdminHeaderProps) {
 
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200">
-          <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <UserCircle className="w-4 h-4 text-emerald-600" />
+          <div className="w-2 h-2 rounded-full bg-[#DC8B20] animate-pulse" />
+          <UserCircle className="w-4 h-4 text-[#DC8B20]" />
           <span className="text-xs text-slate-700 font-medium">{adminEmail}</span>
         </div>
       </div>

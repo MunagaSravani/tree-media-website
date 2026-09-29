@@ -174,7 +174,7 @@ export default function HomeClientView() {
           <div className="col-span-12 lg:col-span-6 space-y-6">
             <div
               data-reveal="eyebrow"
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold uppercase tracking-wider"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-[#DC8B20]/10 border border-[#DC8B20]/30 text-[#DC8B20] text-xs font-semibold uppercase tracking-wider"
             >
               <span>About Tree Media</span>
             </div>
@@ -200,7 +200,7 @@ export default function HomeClientView() {
             >
               <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-xs space-y-1">
                 <h4 className="text-slate-900 text-sm font-bold flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-emerald-600" />
+                  <Shield className="w-4 h-4 text-[#DC8B20]" />
                   <span>Elite Roster</span>
                 </h4>
                 <p className="text-xs text-slate-500 leading-relaxed">
@@ -223,7 +223,7 @@ export default function HomeClientView() {
               <Link
                 href="/about"
                 prefetch={true}
-                className="inline-flex items-center gap-2 text-sm font-bold text-emerald-700 hover:text-emerald-800 group"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#DC8B20] hover:text-[#DC8B20] group"
               >
                 <span>Discover Our Complete Heritage & Story</span>
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -248,7 +248,7 @@ export default function HomeClientView() {
                     <span className="text-xs font-bold text-slate-900 block">Beverly Hills Headquarters</span>
                     <span className="text-[11px] text-slate-500">Audition Studios & Production Suites</span>
                   </div>
-                  <span className="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                  <span className="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-[#DC8B20]/10 text-[#DC8B20] border border-[#DC8B20]/30">
                     Global Agency
                   </span>
                 </div>
@@ -264,7 +264,7 @@ export default function HomeClientView() {
           <div>
             <span
               data-reveal="eyebrow"
-              className="text-xs font-semibold text-emerald-700 uppercase tracking-wider block"
+              className="text-xs font-semibold text-[#DC8B20] uppercase tracking-wider block"
             >
               What We Do
             </span>
@@ -286,7 +286,7 @@ export default function HomeClientView() {
               >
                 <div className="space-y-4">
                   <div className="w-14 h-14 rounded-2xl bg-slate-200/80 flex items-center justify-center">
-                    <Loader2 className="w-6 h-6 text-emerald-600/70 animate-spin" />
+                    <Loader2 className="w-6 h-6 text-[#DC8B20]/80 animate-spin" />
                   </div>
                   <div className="h-6 w-3/4 rounded-lg bg-slate-200/80" />
                   <div className="space-y-2 pt-2">
@@ -322,7 +322,7 @@ export default function HomeClientView() {
           <Link
             href="/services"
             prefetch={true}
-            className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 active:scale-98 text-white font-bold text-sm shadow-xl shadow-emerald-600/25 hover:-translate-y-0.5 transition-all group cursor-pointer"
+            className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-[#DC8B20] hover:bg-[#DC8B20] active:scale-98 text-white font-bold text-sm shadow-xl shadow-[#DC8B20]/25 hover:-translate-y-0.5 transition-all group cursor-pointer"
           >
             <span>View All Services</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -336,7 +336,7 @@ export default function HomeClientView() {
           <div>
             <span
               data-reveal="eyebrow"
-              className="text-xs font-semibold text-emerald-700 uppercase tracking-wider block"
+              className="text-xs font-semibold text-[#DC8B20] uppercase tracking-wider block"
             >
               Represented Artists
             </span>
@@ -357,7 +357,7 @@ export default function HomeClientView() {
                 className="relative rounded-3xl overflow-hidden bg-white border border-slate-200/80 flex flex-col justify-between min-h-[460px] animate-pulse shadow-xs"
               >
                 <div className="relative h-[285px] bg-slate-900/90 flex flex-col items-center justify-center space-y-3">
-                  <Loader2 className="w-8 h-8 text-emerald-500 animate-spin" />
+                  <Loader2 className="w-8 h-8 text-[#DC8B20] animate-spin" />
                   <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-widest">
                     Loading Artist...
                   </span>
@@ -399,7 +399,7 @@ export default function HomeClientView() {
           <Link
             href="/profiles"
             prefetch={true}
-            className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 active:scale-98 text-white font-bold text-sm shadow-xl shadow-emerald-600/25 hover:-translate-y-0.5 transition-all group cursor-pointer"
+            className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-[#DC8B20] hover:bg-[#DC8B20] active:scale-98 text-white font-bold text-sm shadow-xl shadow-[#DC8B20]/25 hover:-translate-y-0.5 transition-all group cursor-pointer"
           >
             <span>View All Talents</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -415,7 +415,7 @@ export default function HomeClientView() {
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <span
             data-reveal="eyebrow"
-            className="text-xs font-semibold text-emerald-700 uppercase tracking-wider block"
+            className="text-xs font-semibold text-[#DC8B20] uppercase tracking-wider block"
           >
             Early Works & Production Highlights
           </span>
@@ -452,7 +452,7 @@ export default function HomeClientView() {
           <Link
             href="/portfolio"
             prefetch={true}
-            className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 active:scale-98 text-white font-bold text-sm shadow-xl shadow-emerald-600/25 hover:-translate-y-0.5 transition-all group cursor-pointer"
+            className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-[#DC8B20] hover:bg-[#DC8B20] active:scale-98 text-white font-bold text-sm shadow-xl shadow-[#DC8B20]/25 hover:-translate-y-0.5 transition-all group cursor-pointer"
           >
             <span>View All Work</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -461,11 +461,11 @@ export default function HomeClientView() {
       </section>
 
       {/* 8. CLIENT TESTIMONIALS */}
-      <section className="max-w-7xl mx-auto px-6 space-y-10">
+      {/* <section className="max-w-7xl mx-auto px-6 space-y-10">
         <div className="text-center max-w-xl mx-auto space-y-2">
           <span
             data-reveal="eyebrow"
-            className="text-xs font-semibold text-emerald-700 uppercase tracking-wider block"
+            className="text-xs font-semibold text-[#DC8B20] uppercase tracking-wider block"
           >
             Industry Endorsements
           </span>
@@ -505,7 +505,7 @@ export default function HomeClientView() {
                     className="w-10 h-10 rounded-full object-cover border border-slate-200"
                   />
                 ) : (
-                  <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center text-xs">
+                  <div className="w-10 h-10 rounded-full bg-[#DC8B20]/15 text-[#915514] font-bold flex items-center justify-center text-xs">
                     {rev.personName?.[0] || "T"}
                   </div>
                 )}
@@ -517,7 +517,7 @@ export default function HomeClientView() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* 9. TRUSTED BY SECTION (Smooth Horizontal Scrolling Layout) */}
       <div data-reveal="fade-up">
@@ -526,11 +526,11 @@ export default function HomeClientView() {
 
       {/* 10. BOTTOM CONVERSION CTA BANNER */}
       <section className="max-w-7xl mx-auto px-6">
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50 p-12 lg:p-16 border border-emerald-200 shadow-lg">
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#DC8B20]/10 via-white to-[#DC8B20]/5 p-12 lg:p-16 border border-[#DC8B20]/30 shadow-lg">
           <div className="relative z-10 max-w-2xl space-y-6">
             <span
               data-reveal="eyebrow"
-              className="text-xs font-bold text-emerald-700 uppercase tracking-widest block"
+              className="text-xs font-bold text-[#DC8B20] uppercase tracking-widest block"
             >
               Join the Roster or Book Elite Talent
             </span>
@@ -551,7 +551,7 @@ export default function HomeClientView() {
               <Link
                 href={settings?.ctaBtnLink || "/contact"}
                 prefetch={true}
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md shadow-emerald-600/20 hover:-translate-y-0.5 transition-all"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white font-bold text-sm shadow-md shadow-[#DC8B20]/25 hover:-translate-y-0.5 transition-all"
               >
                 <span>{settings?.ctaBtnText || "Book a Consultation"}</span>
                 <ArrowRight className="w-4 h-4" />

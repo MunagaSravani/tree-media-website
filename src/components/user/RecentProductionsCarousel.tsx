@@ -126,7 +126,7 @@ export default function RecentProductionsCarousel({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         aria-label="Slide Left"
-        className="absolute -left-2 sm:-left-4 top-[215px] -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 hover:bg-white text-slate-800 hover:text-emerald-700 shadow-lg hover:shadow-2xl border border-slate-200/90 flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer backdrop-blur-md group"
+        className="absolute -left-2 sm:-left-4 top-[215px] -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 hover:bg-white text-slate-800 hover:text-[#DC8B20] shadow-lg hover:shadow-2xl border border-slate-200/90 flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer backdrop-blur-md group"
       >
         <span className="text-2xl sm:text-3xl font-light leading-none -mt-1 select-none group-hover:-translate-x-0.5 transition-transform">
           ‹
@@ -140,7 +140,7 @@ export default function RecentProductionsCarousel({
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         aria-label="Slide Right"
-        className="absolute -right-2 sm:-right-4 top-[215px] -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 hover:bg-white text-slate-800 hover:text-emerald-700 shadow-lg hover:shadow-2xl border border-slate-200/90 flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer backdrop-blur-md group"
+        className="absolute -right-2 sm:-right-4 top-[215px] -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 hover:bg-white text-slate-800 hover:text-[#DC8B20] shadow-lg hover:shadow-2xl border border-slate-200/90 flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer backdrop-blur-md group"
       >
         <span className="text-2xl sm:text-3xl font-light leading-none -mt-1 select-none group-hover:translate-x-0.5 transition-transform">
           ›
@@ -177,7 +177,7 @@ export default function RecentProductionsCarousel({
         <Link
           href="/portfolio"
           prefetch={true}
-          className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 active:scale-98 text-white font-bold text-sm shadow-xl shadow-emerald-600/25 hover:-translate-y-0.5 transition-all group cursor-pointer"
+          className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-[#DC8B20] hover:bg-[#DC8B20] active:scale-98 text-white font-bold text-sm shadow-xl shadow-[#DC8B20]/25 hover:-translate-y-0.5 transition-all group cursor-pointer"
         >
           <span>View All Work</span>
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -193,14 +193,14 @@ export default function PortfolioClientView({
         <section className="text-center space-y-4">
           {/* <div
             data-reveal="eyebrow"
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-emerald-300 text-emerald-700 text-xs font-semibold uppercase tracking-widest shadow-xs"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#DC8B20]/50 text-[#DC8B20] text-xs font-semibold uppercase tracking-widest shadow-xs"
           >
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600 animate-pulse" />
+            <Sparkles className="w-3.5 h-3.5 text-[#DC8B20] animate-pulse" />
             <span>Production Portfolio</span>
           </div> */}
           <h1
             data-reveal="heading"
-            className="text-4xl lg:text-6xl font-black text-slate-900 tracking-tight"
+            className="text-4xl lg:text-5xl font-black text-slate-900 tracking-tight"
           >
             Selected Works & Cinematic Case Studies
           </h1>
@@ -236,7 +236,7 @@ export default function PortfolioClientView({
                   onClick={() => setSelectedCategory(cat)}
                   className={`inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all duration-300 ${
                     isSelected
-                      ? "bg-emerald-600 text-white shadow-md shadow-emerald-600/20 scale-[1.02]"
+                      ? "bg-[#DC8B20] text-white shadow-md shadow-[#DC8B20]/25 scale-[1.02]"
                       : "bg-white text-slate-700 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 shadow-xs"
                   }`}
                 >
@@ -244,7 +244,7 @@ export default function PortfolioClientView({
                   <span
                     className={`px-1.5 py-0.5 rounded-full text-[10px] font-mono ${
                       isSelected
-                        ? "bg-emerald-700/60 text-emerald-100"
+                        ? "bg-[#DC8B20]/60 text-[#fdf0d5]"
                         : "bg-slate-100 text-slate-500"
                     }`}
                   >
@@ -263,7 +263,7 @@ export default function PortfolioClientView({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search projects or clients..."
-              className="w-full pl-10 pr-4 py-2 rounded-xl text-xs bg-white border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 shadow-xs transition-all"
+              className="w-full pl-10 pr-4 py-2 rounded-xl text-xs bg-white border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#DC8B20] focus:border-[#DC8B20]/300 shadow-xs transition-all"
             />
           </div>
         </div>
@@ -283,7 +283,7 @@ export default function PortfolioClientView({
                 setSelectedCategory("All");
                 setSearchQuery("");
               }}
-              className="inline-flex items-center gap-1.5 text-xs text-emerald-700 hover:text-emerald-800 font-semibold"
+              className="inline-flex items-center gap-1.5 text-xs text-[#DC8B20] hover:text-[#DC8B20] font-semibold"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               <span>Reset Filters</span>
@@ -314,7 +314,7 @@ export default function PortfolioClientView({
                 setSelectedCategory("All");
                 setSearchQuery("");
               }}
-              className="px-4 py-2 rounded-xl bg-emerald-600 text-white text-xs font-bold shadow-xs hover:bg-emerald-500 transition-colors"
+              className="px-4 py-2 rounded-xl bg-[#DC8B20] text-white text-xs font-bold shadow-xs hover:bg-[#DC8B20] transition-colors"
             >
               Show All Works
             </button>
@@ -324,9 +324,9 @@ export default function PortfolioClientView({
 
       {/* 5. Production Consultation & Project Briefing Banner */}
       <section className="animate-fade-in-up" style={{ animationDelay: "200ms" }}>
-        <div className="group glass-panel bg-white p-10 lg:p-12 rounded-3xl border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-emerald-200">
+        <div className="group glass-panel bg-white p-10 lg:p-12 rounded-3xl border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-[#DC8B20]/30">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#DC8B20]/10 border border-[#DC8B20]/30 text-[#DC8B20] text-xs font-semibold uppercase tracking-wider">
               <span>Executive Production Services</span>
             </div>
             <h3 className="text-2xl font-bold text-slate-900">
@@ -340,7 +340,7 @@ export default function PortfolioClientView({
             <Link
               href="/contact"
               prefetch={true}
-              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 hover:shadow-emerald-600/30 hover:scale-[1.02] flex items-center justify-center gap-2 transition-all duration-300"
+              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white font-bold text-xs shadow-md shadow-[#DC8B20]/25 hover:shadow-[#DC8B20]/25 hover:scale-[1.02] flex items-center justify-center gap-2 transition-all duration-300"
             >
               <span>Initiate Production Brief</span>
               <ArrowRight className="w-4 h-4" />

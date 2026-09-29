@@ -146,7 +146,7 @@ export default function AdminEnquiriesPage() {
   });
 
   const STATUS_BADGES: Record<string, string> = {
-    new: "bg-emerald-50 text-emerald-700 border-emerald-200",
+    new: "bg-[#DC8B20]/10 text-[#DC8B20] border-[#DC8B20]/30",
     in_progress: "bg-amber-50 text-amber-800 border-amber-200",
     completed: "bg-blue-50 text-blue-700 border-blue-200",
     closed: "bg-slate-100 text-slate-600 border-slate-200",
@@ -215,7 +215,7 @@ export default function AdminEnquiriesPage() {
                   onClick={() => setStatusFilter(tab.id)}
                   className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                     statusFilter === tab.id
-                      ? "bg-emerald-600 text-white shadow-xs"
+                      ? "bg-[#DC8B20] text-white shadow-xs"
                       : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
                   }`}
                 >
@@ -233,7 +233,7 @@ export default function AdminEnquiriesPage() {
               placeholder="Search name, email, role, subject..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-9 pr-4 py-1.5 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none"
+              className="w-full pl-9 pr-4 py-1.5 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none"
             />
           </div>
         </div>
@@ -244,7 +244,7 @@ export default function AdminEnquiriesPage() {
           <div className="col-span-5 space-y-3 max-h-[calc(100vh-280px)] overflow-y-auto pr-1">
             {loading ? (
               <div className="py-12 flex flex-col items-center justify-center space-y-2">
-                <Loader2 className="w-6 h-6 text-emerald-600 animate-spin" />
+                <Loader2 className="w-6 h-6 text-[#DC8B20] animate-spin" />
                 <span className="text-xs text-slate-500">Loading inquiries...</span>
               </div>
             ) : filtered.length === 0 ? (
@@ -263,7 +263,7 @@ export default function AdminEnquiriesPage() {
                     }}
                     className={`cursor-pointer p-4 rounded-2xl border transition-all ${
                       isSelected
-                        ? "bg-emerald-50/80 border-emerald-300 shadow-xs"
+                        ? "bg-[#DC8B20]/10 border-[#DC8B20]/50 shadow-xs"
                         : "glass-panel bg-white border-slate-200 hover:border-slate-300 shadow-xs"
                     }`}
                   >
@@ -287,7 +287,7 @@ export default function AdminEnquiriesPage() {
                       </span>
                     </div>
 
-                    <p className="text-xs font-semibold text-emerald-700 truncate">{enq.subject}</p>
+                    <p className="text-xs font-semibold text-[#DC8B20] truncate">{enq.subject}</p>
                     <p className="text-[11px] text-slate-500 line-clamp-2 mt-1 leading-relaxed">
                       {enq.message}
                     </p>
@@ -326,7 +326,7 @@ export default function AdminEnquiriesPage() {
                     <select
                       value={selectedEnquiry.status}
                       onChange={(e) => handleStatusChange(selectedEnquiry.id, e.target.value)}
-                      className="px-3 py-1.5 rounded-xl bg-white border border-slate-300 text-xs text-slate-800 font-semibold focus:border-emerald-600 focus:outline-none"
+                      className="px-3 py-1.5 rounded-xl bg-white border border-slate-300 text-xs text-slate-800 font-semibold focus:border-[#DC8B20] focus:outline-none"
                     >
                       <option value="new">NEW</option>
                       <option value="in_progress">IN PROGRESS</option>
@@ -347,7 +347,7 @@ export default function AdminEnquiriesPage() {
                 {/* Client Contact Details */}
                 <div className="grid grid-cols-3 gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
                   <div className="flex items-center gap-2.5">
-                    <User className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <User className="w-4 h-4 text-[#DC8B20] shrink-0" />
                     <div>
                       <span className="text-[10px] text-slate-500 block">Sender</span>
                       <span className="text-xs font-semibold text-slate-900">{selectedEnquiry.name}</span>
@@ -355,12 +355,12 @@ export default function AdminEnquiriesPage() {
                   </div>
 
                   <div className="flex items-center gap-2.5">
-                    <Mail className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <Mail className="w-4 h-4 text-[#DC8B20] shrink-0" />
                     <div className="truncate">
                       <span className="text-[10px] text-slate-500 block">Email</span>
                       <a
                         href={`mailto:${selectedEnquiry.email}`}
-                        className="text-xs font-semibold text-emerald-700 hover:underline truncate block"
+                        className="text-xs font-semibold text-[#DC8B20] hover:underline truncate block"
                       >
                         {selectedEnquiry.email}
                       </a>
@@ -368,7 +368,7 @@ export default function AdminEnquiriesPage() {
                   </div>
 
                   <div className="flex items-center gap-2.5">
-                    <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <Phone className="w-4 h-4 text-[#DC8B20] shrink-0" />
                     <div>
                       <span className="text-[10px] text-slate-500 block">Phone</span>
                       <span className="text-xs font-semibold text-slate-900">
@@ -382,7 +382,7 @@ export default function AdminEnquiriesPage() {
                 {(selectedEnquiry.profileName || selectedEnquiry.serviceTitle) && (
                   <div className="flex items-center gap-4 text-xs">
                     {selectedEnquiry.profileName && (
-                      <div className="px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-700 font-medium">
+                      <div className="px-3 py-1.5 rounded-lg bg-[#DC8B20]/10 border border-[#DC8B20]/30 text-[#DC8B20] font-medium">
                         Target Talent: <strong>{selectedEnquiry.profileName}</strong>
                       </div>
                     )}
@@ -413,7 +413,7 @@ export default function AdminEnquiriesPage() {
                     <button
                       onClick={handleSaveNotes}
                       disabled={savingNotes}
-                      className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold transition-all disabled:opacity-50 cursor-pointer shadow-xs"
+                      className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#DC8B20] hover:bg-[#DC8B20] text-white text-xs font-semibold transition-all disabled:opacity-50 cursor-pointer shadow-xs"
                     >
                       {savingNotes ? (
                         <Loader2 className="w-3.5 h-3.5 animate-spin" />
@@ -428,7 +428,7 @@ export default function AdminEnquiriesPage() {
                     placeholder="Enter private agency follow-up notes, call summaries, or offer details..."
                     value={notes}
                     onChange={(e) => setNotes(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none resize-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none resize-none"
                   />
                 </div>
               </div>

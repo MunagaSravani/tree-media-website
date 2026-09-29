@@ -114,7 +114,7 @@ export default function AdminTestimonialsPage() {
           </span>
           <button
             onClick={handleStartNew}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 transition-all"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white text-xs font-bold shadow-md shadow-[#DC8B20]/25 transition-all"
           >
             <PlusCircle className="w-4 h-4" />
             <span>Add New Review</span>
@@ -145,7 +145,7 @@ export default function AdminTestimonialsPage() {
                       required
                       value={editingItem.personName}
                       onChange={(e) => setEditingItem({ ...editingItem, personName: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                     />
                   </div>
 
@@ -157,7 +157,7 @@ export default function AdminTestimonialsPage() {
                       placeholder="e.g. Executive Producer"
                       value={editingItem.designation}
                       onChange={(e) => setEditingItem({ ...editingItem, designation: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                     />
                   </div>
                 </div>
@@ -171,7 +171,7 @@ export default function AdminTestimonialsPage() {
                       placeholder="e.g. Paramount International"
                       value={editingItem.company}
                       onChange={(e) => setEditingItem({ ...editingItem, company: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                      className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                     />
                   </div>
 
@@ -180,7 +180,7 @@ export default function AdminTestimonialsPage() {
                     <select
                       value={editingItem.rating}
                       onChange={(e) => setEditingItem({ ...editingItem, rating: Number(e.target.value) })}
-                      className="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                      className="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
                     >
                       <option value={5} className="bg-white text-slate-900">5 Stars ★★★★★</option>
                       <option value={4} className="bg-white text-slate-900">4 Stars ★★★★☆</option>
@@ -196,7 +196,7 @@ export default function AdminTestimonialsPage() {
                     required
                     value={editingItem.testimonial}
                     onChange={(e) => setEditingItem({ ...editingItem, testimonial: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none resize-none"
+                    className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none resize-none"
                   />
                 </div>
 
@@ -217,7 +217,7 @@ export default function AdminTestimonialsPage() {
                   <button
                     type="submit"
                     disabled={saving}
-                    className="px-6 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-2 shadow-sm"
+                    className="px-6 py-2 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white text-xs font-bold flex items-center gap-2 shadow-sm"
                   >
                     {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                     <span>Save Review</span>
@@ -232,7 +232,7 @@ export default function AdminTestimonialsPage() {
         <div className="grid grid-cols-3 gap-6">
           {loading ? (
             <div className="col-span-3 py-12 flex justify-center">
-              <Loader2 className="w-6 h-6 text-emerald-600 animate-spin" />
+              <Loader2 className="w-6 h-6 text-[#DC8B20] animate-spin" />
             </div>
           ) : (
             items.map((t) => (
@@ -257,7 +257,7 @@ export default function AdminTestimonialsPage() {
                     {t.profileImage ? (
                       <img src={t.profileImage} alt={t.personName} className="w-9 h-9 rounded-full object-cover border border-slate-200" />
                     ) : (
-                      <div className="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center text-xs font-bold text-emerald-700">
+                      <div className="w-9 h-9 rounded-full bg-[#DC8B20]/10 border border-[#DC8B20]/30 flex items-center justify-center text-xs font-bold text-[#DC8B20]">
                         {t.personName[0]}
                       </div>
                     )}

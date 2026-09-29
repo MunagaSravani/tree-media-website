@@ -116,7 +116,7 @@ function ContactFormContent() {
         <div>
           <span
             data-reveal="eyebrow"
-            className="text-xs font-semibold text-emerald-700 uppercase tracking-wider block"
+            className="text-xs font-semibold text-[#DC8B20] uppercase tracking-wider block"
           >
             Direct Correspondence
           </span>
@@ -129,8 +129,8 @@ function ContactFormContent() {
         </div>
 
         {success && (
-          <div className="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-start gap-3.5 text-xs text-emerald-800 animate-in fade-in">
-            <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+          <div className="p-5 rounded-2xl bg-[#DC8B20]/10 border border-[#DC8B20]/30 flex items-start gap-3.5 text-xs text-[#915514] animate-in fade-in">
+            <CheckCircle2 className="w-5 h-5 text-[#DC8B20] shrink-0 mt-0.5" />
             <div className="space-y-1">
               <p className="font-bold text-slate-900 text-sm">Form Submitted Successfully</p>
               <p className="text-slate-600">
@@ -157,7 +157,7 @@ function ContactFormContent() {
                 placeholder="e.g. Christopher Nolan"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
 
@@ -169,7 +169,7 @@ function ContactFormContent() {
                 placeholder="producer@studio.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
           </div>
@@ -182,7 +182,7 @@ function ContactFormContent() {
                 placeholder="+91 0000000000"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
 
@@ -193,7 +193,7 @@ function ContactFormContent() {
                 required
                 value={formData.subject}
                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
           </div>
@@ -203,7 +203,7 @@ function ContactFormContent() {
             <select
               value={formData.serviceId}
               onChange={(e) => setFormData({ ...formData, serviceId: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
             >
               <option value="" className="bg-white text-slate-900">General Agency Consultation</option>
               {servicesList.map((s) => (
@@ -224,14 +224,14 @@ function ContactFormContent() {
               placeholder="Include talent preferences, production dates, shoot locations, budget parameters, and character specs..."
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-emerald-600 focus:outline-none resize-none"
+              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm placeholder:text-slate-400 focus:border-[#DC8B20] focus:outline-none resize-none"
             />
           </div>
 
           <button
             type="submit"
             disabled={submitting}
-            className="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md shadow-emerald-600/20 flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-50"
+            className="w-full py-3.5 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white font-bold text-sm shadow-md shadow-[#DC8B20]/25 flex items-center justify-center gap-2 transition-all cursor-pointer disabled:opacity-50"
           >
             {submitting ? (
               <Loader2 className="w-4 h-4 animate-spin" />
@@ -264,7 +264,7 @@ function ContactFormContent() {
             className="space-y-4 text-xs text-slate-700"
           >
             <div className="flex items-start gap-3">
-              <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <MapPin className="w-4 h-4 text-[#DC8B20] shrink-0 mt-0.5" />
               <div>
                 <span className="font-bold text-slate-900 block">Corporate Office</span>
                 <span className="text-slate-600 leading-relaxed block">{address}</span>
@@ -272,12 +272,12 @@ function ContactFormContent() {
             </div>
 
             <div className="flex items-center gap-3">
-              <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
+              <Phone className="w-4 h-4 text-[#DC8B20] shrink-0" />
               <div>
                 <span className="font-bold text-slate-900 block">Telephone</span>
                 <a
                   href={`tel:${phone.replace(/\s+/g, '')}`}
-                  className="text-slate-600 hover:text-emerald-600 transition-colors font-semibold"
+                  className="text-slate-600 hover:text-[#DC8B20] transition-colors font-semibold"
                 >
                   {phone}
                 </a>
@@ -285,12 +285,12 @@ function ContactFormContent() {
             </div>
 
             <div className="flex items-center gap-3">
-              <Mail className="w-4 h-4 text-emerald-600 shrink-0" />
+              <Mail className="w-4 h-4 text-[#DC8B20] shrink-0" />
               <div>
                 <span className="font-bold text-slate-900 block">Official Inquiries</span>
                 <a
                   href={`mailto:${email}`}
-                  className="text-slate-600 hover:text-emerald-600 transition-colors font-semibold"
+                  className="text-slate-600 hover:text-[#DC8B20] transition-colors font-semibold"
                 >
                   {email}
                 </a>
@@ -298,7 +298,7 @@ function ContactFormContent() {
             </div>
 
             <div className="flex items-start gap-3 pt-1 border-t border-slate-100">
-              <Clock className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+              <Clock className="w-4 h-4 text-[#DC8B20] shrink-0 mt-0.5" />
               <div className="space-y-0.5">
                 <span className="font-bold text-slate-900 block">Open Hours:</span>
                 <span className="text-slate-600 block">Mon – Sat: 9 am – 6 pm,</span>

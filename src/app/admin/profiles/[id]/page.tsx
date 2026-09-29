@@ -139,7 +139,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
       <div className="bg-slate-50 min-h-screen">
         <AdminHeader title="Edit Profile" />
         <div className="p-16 flex flex-col items-center justify-center space-y-2">
-          <Loader2 className="w-6 h-6 text-emerald-600 animate-spin" />
+          <Loader2 className="w-6 h-6 text-[#DC8B20] animate-spin" />
           <span className="text-xs text-slate-500">Loading talent details...</span>
         </div>
       </div>
@@ -178,7 +178,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
                 required
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
 
@@ -189,7 +189,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
                 required
                 value={formData.slug}
                 onChange={(e) => setFormData({ ...formData, slug: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-emerald-700 font-mono text-sm focus:border-emerald-600 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-[#DC8B20] font-mono text-sm focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
           </div>
@@ -200,7 +200,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
               <select
                 value={formData.category}
                 onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                className="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                className="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
               >
                 <option value="Actor">Actor</option>
                 <option value="Model">Model</option>
@@ -215,7 +215,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
               <select
                 value={formData.gender}
                 onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
-                className="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                className="w-full px-3 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
               >
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -231,7 +231,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
                 max={120}
                 value={formData.age}
                 onChange={(e) => setFormData({ ...formData, age: Number(e.target.value) })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
 
@@ -241,7 +241,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
                 type="text"
                 value={formData.height}
                 onChange={(e) => setFormData({ ...formData, height: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
           </div>
@@ -253,7 +253,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
                 type="text"
                 value={formData.location}
                 onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
 
@@ -264,7 +264,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
                 min={0}
                 value={formData.experienceYears}
                 onChange={(e) => setFormData({ ...formData, experienceYears: Number(e.target.value) })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
           </div>
@@ -282,7 +282,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
               required
               value={formData.shortBio}
               onChange={(e) => setFormData({ ...formData, shortBio: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
             />
           </div>
 
@@ -293,7 +293,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
               required
               value={formData.fullBio}
               onChange={(e) => setFormData({ ...formData, fullBio: e.target.value })}
-              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none resize-none"
+              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none resize-none"
             />
           </div>
 
@@ -304,7 +304,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
                 type="text"
                 value={formData.skillsString}
                 onChange={(e) => setFormData({ ...formData, skillsString: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
 
@@ -314,7 +314,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
                 type="text"
                 value={formData.languagesString}
                 onChange={(e) => setFormData({ ...formData, languagesString: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-emerald-600 focus:outline-none"
+                className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-900 text-sm focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
           </div>
@@ -326,7 +326,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
                 type="text"
                 value={formData.instagram}
                 onChange={(e) => setFormData({ ...formData, instagram: e.target.value })}
-                className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-emerald-600 focus:outline-none"
+                className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
 
@@ -336,7 +336,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
                 type="text"
                 value={formData.imdb}
                 onChange={(e) => setFormData({ ...formData, imdb: e.target.value })}
-                className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-emerald-600 focus:outline-none"
+                className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
 
@@ -346,7 +346,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
                 type="text"
                 value={formData.youtube}
                 onChange={(e) => setFormData({ ...formData, youtube: e.target.value })}
-                className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-emerald-600 focus:outline-none"
+                className="w-full px-3 py-2 rounded-xl bg-white border border-slate-300 text-xs text-slate-900 focus:border-[#DC8B20] focus:outline-none"
               />
             </div>
           </div>
@@ -358,7 +358,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
                   type="checkbox"
                   checked={formData.isFeatured}
                   onChange={(e) => setFormData({ ...formData, isFeatured: e.target.checked })}
-                  className="rounded border-slate-300 text-emerald-600 focus:ring-0"
+                  className="rounded border-slate-300 text-[#DC8B20] focus:ring-0"
                 />
                 <span>Feature on Agency Homepage</span>
               </label>
@@ -368,7 +368,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
                 <select
                   value={formData.status}
                   onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                  className="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-emerald-700 font-semibold focus:outline-none"
+                  className="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-xs text-[#DC8B20] font-semibold focus:outline-none"
                 >
                   <option value="published">Published (Live)</option>
                   <option value="draft">Draft (Hidden)</option>
@@ -380,7 +380,7 @@ export default function EditProfilePage({ params }: { params: Promise<{ id: stri
             <button
               type="submit"
               disabled={loading}
-              className="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-md shadow-emerald-600/20 flex items-center gap-2 transition-all disabled:opacity-50 cursor-pointer"
+              className="px-6 py-2.5 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white text-xs font-bold shadow-md shadow-[#DC8B20]/25 flex items-center gap-2 transition-all disabled:opacity-50 cursor-pointer"
             >
               {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
               <span>Save Changes</span>

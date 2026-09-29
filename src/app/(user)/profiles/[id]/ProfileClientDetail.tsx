@@ -72,7 +72,7 @@ export default function ProfileClientDetail({ profile }: ProfileClientDetailProp
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
             <div className="absolute top-4 left-4">
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/95 text-emerald-700 border border-slate-200 shadow-xs">
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/95 text-[#DC8B20] border border-slate-200 shadow-xs">
                 {profile.category}
               </span>
             </div>
@@ -103,7 +103,7 @@ export default function ProfileClientDetail({ profile }: ProfileClientDetailProp
             <div className="col-span-2 pt-2 border-t border-slate-100 space-y-0.5">
               <span className="text-[10px] text-slate-500 uppercase tracking-wider block">Location</span>
               <span className="text-slate-900 font-bold flex items-center gap-1">
-                <MapPin className="w-3.5 h-3.5 text-emerald-600" />
+                <MapPin className="w-3.5 h-3.5 text-[#DC8B20]" />
                 {profile.location}
               </span>
             </div>
@@ -114,7 +114,7 @@ export default function ProfileClientDetail({ profile }: ProfileClientDetailProp
             data-reveal="fade-up"
             data-reveal-delay="150"
             onClick={() => setModalOpen(true)}
-            className="w-full py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md shadow-emerald-600/20 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full py-4 rounded-2xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white font-bold text-sm shadow-md shadow-[#DC8B20]/25 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer"
           >
             <Sparkles className="w-4 h-4" />
             <span>Book or Inquire About {profile.name}</span>
@@ -126,7 +126,7 @@ export default function ProfileClientDetail({ profile }: ProfileClientDetailProp
           <div>
             <span
               data-reveal="eyebrow"
-              className="text-xs font-mono uppercase tracking-widest text-emerald-700 font-semibold block"
+              className="text-xs font-mono uppercase tracking-widest text-[#DC8B20] font-semibold block"
             >
               Tree Media Exclusive Representation
             </span>
@@ -186,7 +186,7 @@ export default function ProfileClientDetail({ profile }: ProfileClientDetailProp
                 {languagesList.map((lang: string, i: number) => (
                   <span
                     key={i}
-                    className="px-2.5 py-1 rounded-lg text-xs bg-emerald-50 text-emerald-700 border border-emerald-200"
+                    className="px-2.5 py-1 rounded-lg text-xs bg-[#DC8B20]/10 text-[#DC8B20] border border-[#DC8B20]/30"
                   >
                     {lang}
                   </span>
@@ -208,7 +208,7 @@ export default function ProfileClientDetail({ profile }: ProfileClientDetailProp
                       <h5 className="font-bold text-slate-900">{proj.title}</h5>
                       <p className="text-slate-500">{proj.role} {proj.client ? `• ${proj.client}` : ""}</p>
                     </div>
-                    <span className="font-mono text-emerald-700 font-semibold text-[11px]">{proj.year}</span>
+                    <span className="font-mono text-[#DC8B20] font-semibold text-[11px]">{proj.year}</span>
                   </div>
                 ))}
               </div>
@@ -348,7 +348,7 @@ export default function ProfileClientDetail({ profile }: ProfileClientDetailProp
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                   />
                   <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                    <div className="w-12 h-12 rounded-full bg-emerald-600/90 text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 rounded-full bg-[#DC8B20]/25 text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
                       <Play className="w-5 h-5 ml-0.5" />
                     </div>
                   </div>

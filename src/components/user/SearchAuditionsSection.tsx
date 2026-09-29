@@ -504,7 +504,7 @@ export const INITIAL_AUDITIONS: AuditionItem[] = [
 ];
 
 const CATEGORY_TAG_STYLES: Record<string, { bg: string; text: string; border: string; dot: string }> = {
-  Actor: { bg: "bg-emerald-50", text: "text-emerald-800", border: "border-emerald-200", dot: "bg-emerald-500" },
+  Actor: { bg: "bg-[#DC8B20]/10", text: "text-[#915514]", border: "border-[#DC8B20]/30", dot: "bg-[#DC8B20]" },
   Model: { bg: "bg-rose-50", text: "text-rose-800", border: "border-rose-200", dot: "bg-rose-500" },
   Singer: { bg: "bg-purple-50", text: "text-purple-800", border: "border-purple-200", dot: "bg-purple-500" },
   Dancer: { bg: "bg-amber-50", text: "text-amber-800", border: "border-amber-200", dot: "bg-amber-500" },
@@ -512,7 +512,7 @@ const CATEGORY_TAG_STYLES: Record<string, { bg: string; text: string; border: st
   "Voice Artist": { bg: "bg-cyan-50", text: "text-cyan-800", border: "border-cyan-200", dot: "bg-cyan-500" },
   Influencer: { bg: "bg-pink-50", text: "text-pink-800", border: "border-pink-200", dot: "bg-pink-500" },
   Photographer: { bg: "bg-indigo-50", text: "text-indigo-800", border: "border-indigo-200", dot: "bg-indigo-500" },
-  "Content Creator": { bg: "bg-teal-50", text: "text-teal-800", border: "border-teal-200", dot: "bg-teal-500" },
+  "Content Creator": { bg: "bg-teal-50", text: "text-teal-800", border: "border-teal-200", dot: "bg-[#DC8B20]" },
 };
 
 export interface SearchAuditionsSectionProps {
@@ -725,9 +725,9 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
         <div className="space-y-2 ">
           {/* <div
             data-reveal="eyebrow"
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#DC8B20]/10 border border-[#DC8B20]/30 text-[#DC8B20] text-xs font-bold uppercase tracking-wider"
           >
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+            <Sparkles className="w-3.5 h-3.5 text-[#DC8B20]" />
             <span>Casting Portal</span>
           </div> */}
           <h2
@@ -753,14 +753,14 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
           {/* {isHome && (
             <Link
               href="/auditions"
-              className="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1.5 transition-colors group cursor-pointer"
+              className="text-xs font-bold text-[#DC8B20] hover:text-[#DC8B20] flex items-center gap-1.5 transition-colors group cursor-pointer"
             >
               <span>View All ({INITIAL_AUDITIONS.length})</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </Link>
           )} */}
           {/* <div className="text-xs font-medium text-slate-500 bg-white px-3.5 py-2 rounded-xl border border-slate-200 shadow-xs flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[#DC8B20] animate-pulse" />
             <span>
               <strong className="text-slate-900 font-bold">{INITIAL_AUDITIONS.length}</strong> Live
               Casting Calls
@@ -785,7 +785,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by role, keyword, studio, or project type..."
-                className="w-full pl-12 pr-10 py-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100/70 focus:bg-white border border-slate-200 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 text-slate-900 text-sm font-medium transition-all outline-hidden placeholder:text-slate-400"
+                className="w-full pl-12 pr-10 py-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100/70 focus:bg-white border border-slate-200 focus:border-[#DC8B20]/300 focus:ring-4 focus:ring-[#DC8B20]/10 text-slate-900 text-sm font-medium transition-all outline-hidden placeholder:text-slate-400"
               />
               {searchQuery && (
                 <button
@@ -803,11 +803,11 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
           {/* 2. Category Dropdown Filter */}
           <div className="lg:col-span-3 relative">
             <div className="relative flex items-center">
-              <Briefcase className="w-4 h-4 text-emerald-600 absolute left-3.5 pointer-events-none" />
+              <Briefcase className="w-4 h-4 text-[#DC8B20] absolute left-3.5 pointer-events-none" />
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full pl-10 pr-9 py-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100/70 focus:bg-white border border-slate-200 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 text-slate-900 text-sm font-medium transition-all outline-hidden appearance-none cursor-pointer"
+                className="w-full pl-10 pr-9 py-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100/70 focus:bg-white border border-slate-200 focus:border-[#DC8B20]/300 focus:ring-4 focus:ring-[#DC8B20]/10 text-slate-900 text-sm font-medium transition-all outline-hidden appearance-none cursor-pointer"
               >
                 {CATEGORIES.map((cat) => (
                   <option key={cat} value={cat}>
@@ -826,7 +826,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
               <select
                 value={selectedLocation}
                 onChange={(e) => setSelectedLocation(e.target.value)}
-                className="w-full pl-10 pr-9 py-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100/70 focus:bg-white border border-slate-200 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 text-slate-900 text-sm font-medium transition-all outline-hidden appearance-none cursor-pointer"
+                className="w-full pl-10 pr-9 py-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100/70 focus:bg-white border border-slate-200 focus:border-[#DC8B20]/300 focus:ring-4 focus:ring-[#DC8B20]/10 text-slate-900 text-sm font-medium transition-all outline-hidden appearance-none cursor-pointer"
               >
                 {LOCATIONS.map((loc) => (
                   <option key={loc} value={loc}>
@@ -861,8 +861,8 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                     onClick={() => handlePopularSearchClick(pop)}
                     className={`text-xs px-2.5 py-1 rounded-lg border transition-all cursor-pointer ${
                       isActive
-                        ? "bg-emerald-600 text-white border-emerald-600 font-semibold shadow-xs"
-                        : "bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-200 text-slate-600 border-slate-200"
+                        ? "bg-[#DC8B20] text-white border-[#DC8B20] font-semibold shadow-xs"
+                        : "bg-slate-100 hover:bg-[#DC8B20]/10 hover:text-[#DC8B20] hover:border-[#DC8B20]/30 text-slate-600 border-slate-200"
                     }`}
                   >
                     {pop.label}
@@ -879,7 +879,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                 type="checkbox"
                 checked={urgentOnly}
                 onChange={(e) => setUrgentOnly(e.target.checked)}
-                className="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 rounded-sm"
+                className="w-4 h-4 rounded text-[#DC8B20] focus:ring-[#DC8B20] border-slate-300 rounded-sm"
               />
               <span className="flex items-center gap-1">
                 <Flame className="w-3.5 h-3.5 text-rose-500" />
@@ -894,7 +894,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
               <button
                 type="button"
                 onClick={handleResetFilters}
-                className="text-xs font-semibold text-emerald-700 hover:text-emerald-800 flex items-center gap-1 px-2.5 py-1 rounded-lg hover:bg-emerald-50 transition-colors cursor-pointer"
+                className="text-xs font-semibold text-[#DC8B20] hover:text-[#DC8B20] flex items-center gap-1 px-2.5 py-1 rounded-lg hover:bg-[#DC8B20]/10 transition-colors cursor-pointer"
               >
                 <RotateCcw className="w-3 h-3" />
                 <span>Reset</span>
@@ -929,21 +929,21 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
           </span>
 
           {isLoading ? (
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-              <Loader2 className="w-3 h-3 animate-spin text-emerald-600" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-[#DC8B20]/10 text-[#DC8B20] border border-[#DC8B20]/30">
+              <Loader2 className="w-3 h-3 animate-spin text-[#DC8B20]" />
               <span>Fetching from Database...</span>
             </span>
           ) : (
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-[#DC8B20]/10 text-[#DC8B20] border border-[#DC8B20]/30">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#DC8B20] animate-pulse" />
               <span>Live Database</span>
             </span>
           )}
         </div>
 
         {savedAuditionIds.length > 0 && (
-          <div className="text-emerald-700 font-semibold flex items-center gap-1">
-            <Bookmark className="w-3.5 h-3.5 fill-emerald-600 text-emerald-600" />
+          <div className="text-[#DC8B20] font-semibold flex items-center gap-1">
+            <Bookmark className="w-3.5 h-3.5 fill-[#DC8B20] text-[#DC8B20]" />
             <span>{savedAuditionIds.length} Auditions Bookmarked</span>
           </div>
         )}
@@ -968,13 +968,13 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
             return (
               <div
                 key={audition.id}
-                className="group relative bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 hover:border-emerald-500/50 shadow-[0_4px_24px_-4px_rgba(15,23,42,0.07),0_2px_8px_-2px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_40px_-12px_rgba(16,185,129,0.2),0_8px_20px_-6px_rgba(15,23,42,0.06)] hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col justify-between space-y-6 overflow-hidden"
+                className="group relative bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/80 hover:border-[#DC8B20]/50 shadow-[0_4px_24px_-4px_rgba(15,23,42,0.07),0_2px_8px_-2px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_40px_-12px_rgba(220, 139, 32,0.2),0_8px_20px_-6px_rgba(15,23,42,0.06)] hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col justify-between space-y-6 overflow-hidden"
               >
                 {/* Top Ambient Accent Shimmer */}
-                <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#DC8B20] via-teal-500 to-[#f1b343] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Ambient Soft Radial Glow */}
-                <div className="absolute -top-12 -right-12 w-28 h-28 bg-emerald-500/5 rounded-full blur-2xl group-hover:bg-emerald-500/10 group-hover:scale-150 transition-all duration-500 pointer-events-none" />
+                <div className="absolute -top-12 -right-12 w-28 h-28 bg-[#DC8B20]/20 rounded-full blur-2xl group-hover:bg-[#DC8B20]/10 group-hover:scale-150 transition-all duration-500 pointer-events-none" />
 
                 {/* Card Top Meta */}
                 <div className="space-y-4">
@@ -983,7 +983,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                       <span
                         className={`inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold rounded-full border shadow-2xs ${tagStyle.bg} ${tagStyle.text} ${tagStyle.border}`}
                       >
-                        <span className={`w-1.5 h-1.5 rounded-full ${tagStyle.dot || "bg-emerald-500"}`} />
+                        <span className={`w-1.5 h-1.5 rounded-full ${tagStyle.dot || "bg-[#DC8B20]"}`} />
                         <span>{audition.category}</span>
                       </span>
                       {audition.isUrgent && (
@@ -1004,11 +1004,11 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                       type="button"
                       onClick={(e) => toggleSaveAudition(audition.id, e)}
                       aria-label="Bookmark Audition"
-                      className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 border border-slate-200/80 bg-slate-50/80 hover:bg-emerald-50 hover:border-emerald-300 text-slate-400 hover:text-emerald-600 transition-all duration-200 shadow-2xs active:scale-90 cursor-pointer"
+                      className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 border border-slate-200/80 bg-slate-50/80 hover:bg-[#DC8B20]/10 hover:border-[#DC8B20]/50 text-slate-400 hover:text-[#DC8B20] transition-all duration-200 shadow-2xs active:scale-90 cursor-pointer"
                     >
                       <Bookmark
                         className={`w-4 h-4 transition-transform duration-200 ${
-                          isSaved ? "fill-emerald-600 text-emerald-600" : ""
+                          isSaved ? "fill-[#DC8B20] text-[#DC8B20]" : ""
                         }`}
                       />
                     </button>
@@ -1018,7 +1018,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                   <div className="space-y-1.5">
                     <h3
                       onClick={() => setSelectedAuditionForDetails(audition)}
-                      className="text-[17px] font-extrabold text-slate-900 group-hover:text-emerald-600 transition-colors duration-200 leading-snug cursor-pointer line-clamp-2"
+                      className="text-[17px] font-extrabold text-slate-900 group-hover:text-[#DC8B20] transition-colors duration-200 leading-snug cursor-pointer line-clamp-2"
                     >
                       {audition.title}
                     </h3>
@@ -1029,12 +1029,12 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                   </div>
 
                   {/* Badges / Specs Box */}
-                  <div className="bg-gradient-to-br from-slate-50/90 via-slate-50/50 to-emerald-50/20 rounded-2xl p-3.5 border border-slate-200/80 shadow-2xs space-y-2.5">
+                  <div className="bg-gradient-to-br from-slate-50/90 via-slate-50/50 to-[#DC8B20]/10 rounded-2xl p-3.5 border border-slate-200/80 shadow-2xs space-y-2.5">
                     {/* Location */}
                     <div className="flex items-center justify-between gap-2 text-xs">
                       <span className="flex items-center gap-2 text-slate-500 font-medium">
-                        <span className="w-6 h-6 rounded-lg bg-teal-50 border border-teal-100/80 flex items-center justify-center shrink-0">
-                          <MapPin className="w-3.5 h-3.5 text-teal-600" />
+                        <span className="w-6 h-6 rounded-lg bg-[#DC8B20]/10 border border-[#DC8B20]/20 flex items-center justify-center shrink-0">
+                          <MapPin className="w-3.5 h-3.5 text-[#DC8B20]" />
                         </span>
                         <span>Location:</span>
                       </span>
@@ -1046,12 +1046,12 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                     {/* Compensation */}
                     <div className="flex items-center justify-between gap-2 text-xs">
                       <span className="flex items-center gap-2 text-slate-500 font-medium shrink-0">
-                        <span className="w-6 h-6 rounded-lg bg-emerald-50 border border-emerald-100/80 flex items-center justify-center shrink-0">
-                          <Banknote className="w-3.5 h-3.5 text-emerald-600" />
+                        <span className="w-6 h-6 rounded-lg bg-[#DC8B20]/10 border border-[#DC8B20]/20/80 flex items-center justify-center shrink-0">
+                          <Banknote className="w-3.5 h-3.5 text-[#DC8B20]" />
                         </span>
                         <span>Compensation:</span>
                       </span>
-                      <span className="text-[11px] sm:text-xs font-black text-emerald-700 bg-emerald-100/80 border border-emerald-200/90 px-2 py-0.5 rounded-md tracking-tight text-right leading-tight">
+                      <span className="text-[11px] sm:text-xs font-black text-[#DC8B20] bg-[#DC8B20]/15 border border-[#DC8B20]/25 px-2 py-0.5 rounded-md tracking-tight text-right leading-tight">
                         {audition.compensation}
                       </span>
                     </div>
@@ -1078,7 +1078,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                   {/* Key Requirements Tags */}
                   <div className="space-y-2 pt-0.5 px-0.5">
                     <div className="flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#DC8B20]" />
                       <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block">
                         Role Specs & Skills
                       </span>
@@ -1104,7 +1104,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                   <button
                     type="button"
                     onClick={() => setSelectedAuditionForDetails(audition)}
-                    className="inline-flex items-center gap-1 px-3 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-emerald-700 hover:bg-slate-100/80 transition-all cursor-pointer"
+                    className="inline-flex items-center gap-1 px-3 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-[#DC8B20] hover:bg-slate-100/80 transition-all cursor-pointer"
                   >
                     <span>View Details</span>
                   </button>
@@ -1112,7 +1112,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                   <button
                     type="button"
                     onClick={() => setSelectedAuditionForApply(audition)}
-                    className="inline-flex items-center gap-1.5 px-4.5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 active:scale-95 text-white font-extrabold text-xs shadow-md shadow-emerald-600/25 hover:shadow-lg hover:shadow-emerald-600/35 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group/btn"
+                    className="inline-flex items-center gap-1.5 px-4.5 py-2.5 rounded-xl bg-gradient-to-r from-[#DC8B20] via-[#DC8B20] to-[#f59e0b] hover:from-[#DC8B20] hover:to-[#e59b36] active:scale-95 text-white font-extrabold text-xs shadow-md shadow-[#DC8B20]/25 hover:shadow-lg hover:shadow-[#DC8B20]/25 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group/btn"
                   >
                     <span>Apply Now</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform duration-200" />
@@ -1128,7 +1128,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/auditions"
-              className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 active:scale-98 text-white font-bold text-sm shadow-xl shadow-emerald-600/25 hover:-translate-y-0.5 transition-all group cursor-pointer"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-2xl bg-[#DC8B20] hover:bg-[#DC8B20] active:scale-98 text-white font-bold text-sm shadow-xl shadow-[#DC8B20]/25 hover:-translate-y-0.5 transition-all group cursor-pointer"
             >
               <span>View All Auditions</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -1139,7 +1139,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
       ) : (
         /* Empty State */
         <div className="text-center py-16 px-6 rounded-3xl bg-white border border-slate-200 space-y-4">
-          <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+          <div className="w-16 h-16 rounded-2xl bg-[#DC8B20]/10 border border-[#DC8B20]/20 text-[#DC8B20] flex items-center justify-center mx-auto">
             <Search className="w-8 h-8" />
           </div>
           <div className="max-w-md mx-auto space-y-1">
@@ -1152,7 +1152,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
           <button
             type="button"
             onClick={handleResetFilters}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 transition-all cursor-pointer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white font-bold text-xs shadow-md shadow-[#DC8B20]/25 transition-all cursor-pointer"
           >
             <RotateCcw className="w-3.5 h-3.5" />
             <span>Reset All Filters</span>
@@ -1215,7 +1215,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
               <div className="grid grid-cols-3 gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-200 text-center">
                 <div className="space-y-0.5">
                   <span className="text-[11px] text-slate-500 font-medium block">Compensation</span>
-                  <span className="text-xs font-bold text-emerald-700">
+                  <span className="text-xs font-bold text-[#DC8B20]">
                     {selectedAuditionForDetails.compensation}
                   </span>
                 </div>
@@ -1227,7 +1227,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                 </div>
                 <div className="space-y-0.5">
                   <span className="text-[11px] text-slate-500 font-medium block">Open Spots</span>
-                  <span className="text-xs font-bold text-teal-700">
+                  <span className="text-xs font-bold text-[#DC8B20]">
                     {selectedAuditionForDetails.spotsOpen} Positions
                   </span>
                 </div>
@@ -1248,7 +1248,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                 <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900">
                   Target Profile & Age Bracket
                 </h4>
-                <div className="p-3.5 rounded-xl bg-emerald-50/60 border border-emerald-100 text-xs text-emerald-900 font-medium">
+                <div className="p-3.5 rounded-xl bg-[#DC8B20]/10 border border-[#DC8B20]/20 text-xs text-[#774614] font-medium">
                   {selectedAuditionForDetails.rolesAvailable}
                 </div>
               </div>
@@ -1261,7 +1261,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                 <ul className="space-y-2">
                   {selectedAuditionForDetails.requirements.map((req, i) => (
                     <li key={i} className="flex items-start gap-2 text-xs text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#DC8B20] shrink-0 mt-0.5" />
                       <span>{req}</span>
                     </li>
                   ))}
@@ -1286,7 +1286,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                   setSelectedAuditionForDetails(null);
                   setSelectedAuditionForApply(item);
                 }}
-                className="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 transition-all flex items-center gap-2 cursor-pointer"
+                className="px-6 py-2.5 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white font-bold text-xs shadow-md shadow-[#DC8B20]/25 transition-all flex items-center gap-2 cursor-pointer"
               >
                 <span>Proceed to Apply</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -1304,7 +1304,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
             {/* Header */}
             <div className="p-6 border-b border-slate-100 flex items-start justify-between gap-4 bg-slate-50">
               <div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-700 block">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#DC8B20] block">
                   Official Audition Application
                 </span>
                 <h3 className="text-lg font-bold text-slate-900 leading-snug mt-0.5">
@@ -1329,7 +1329,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
             {/* Form Content */}
             {submitSuccess ? (
               <div className="p-8 text-center space-y-4">
-                <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mx-auto">
+                <div className="w-14 h-14 rounded-2xl bg-[#DC8B20]/10 text-[#DC8B20] border border-[#DC8B20]/30 flex items-center justify-center mx-auto">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <div className="space-y-1">
@@ -1367,7 +1367,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                       value={applicantName}
                       onChange={(e) => setApplicantName(e.target.value)}
                       placeholder="e.g. Aryan Sharma"
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-emerald-500 focus:bg-white text-xs outline-hidden"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#DC8B20]/300 focus:bg-white text-xs outline-hidden"
                     />
                   </div>
 
@@ -1379,7 +1379,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                       value={applicantPhone}
                       onChange={(e) => setApplicantPhone(e.target.value)}
                       placeholder="+91 98765 43210"
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-emerald-500 focus:bg-white text-xs outline-hidden"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#DC8B20]/300 focus:bg-white text-xs outline-hidden"
                     />
                   </div>
                 </div>
@@ -1392,7 +1392,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                     value={applicantEmail}
                     onChange={(e) => setApplicantEmail(e.target.value)}
                     placeholder="aryan@example.com"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-emerald-500 focus:bg-white text-xs outline-hidden"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#DC8B20]/300 focus:bg-white text-xs outline-hidden"
                   />
                 </div>
 
@@ -1406,7 +1406,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                     value={applicantPortfolio}
                     onChange={(e) => setApplicantPortfolio(e.target.value)}
                     placeholder="https://youtube.com/watch?v=... or Drive link"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-emerald-500 focus:bg-white text-xs outline-hidden"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#DC8B20]/300 focus:bg-white text-xs outline-hidden"
                   />
                 </div>
 
@@ -1419,7 +1419,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                     value={applicantNotes}
                     onChange={(e) => setApplicantNotes(e.target.value)}
                     placeholder="Tell our casting directors about your past credits, vocal range, acting school, or shoot schedule flexibility..."
-                    className="w-full p-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-emerald-500 focus:bg-white text-xs outline-hidden resize-none"
+                    className="w-full p-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-[#DC8B20]/300 focus:bg-white text-xs outline-hidden resize-none"
                   />
                 </div>
 
@@ -1435,7 +1435,7 @@ export default function SearchAuditionsSection({ isHome = false }: SearchAuditio
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md shadow-emerald-600/20 transition-all disabled:opacity-50 cursor-pointer"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#DC8B20] hover:bg-[#DC8B20] text-white font-bold text-xs shadow-md shadow-[#DC8B20]/25 transition-all disabled:opacity-50 cursor-pointer"
                   >
                     {isSubmitting ? (
                       <>

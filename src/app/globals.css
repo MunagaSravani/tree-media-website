@@ -1,15 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
+/* Self-Hosted Manrope Web Font with Google Fonts CDN Fallback */
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-Variable.woff2') format('woff2-variations'),
+       url('/fonts/Manrope-Variable.woff2') format('woff2'),
+       url('https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2') format('woff2');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
-  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-montserrat: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-montserrat: 'Manrope', sans-serif;
+  --font-manrope: 'Manrope', sans-serif;
   --color-slate-900: #080808;
   --color-slate-800: #1b1c1d;
   --color-slate-700: #3b3b3b;
   --color-slate-600: #5f6360;
   --color-slate-500: #727272;
+  --color-emerald-50: #fef8ee;
+  --color-emerald-100: #fdf0d7;
+  --color-emerald-200: #fbdfae;
+  --color-emerald-300: #f7ca7d;
+  --color-emerald-400: #f1ad47;
+  --color-emerald-500: #DC8B20;
+  --color-emerald-600: #c47517;
+  --color-emerald-700: #9e5814;
+  --color-emerald-800: #7e4616;
+  --color-emerald-900: #673b16;
+  --color-emerald-950: #3b1d09;
+  --color-green-500: #DC8B20;
+  --color-green-600: #c47517;
 }
 
 @layer base {
@@ -20,97 +46,129 @@
     --text-primary: #080808;     /* Shreyas Media deep headline black */
     --text-secondary: #5f6360;   /* Shreyas Media signature body text color */
     --text-muted: #727272;       /* Shreyas Media meta/subtext grey */
-    --accent-emerald: #059669;
+    --accent-emerald: #DC8B20;
     --accent-teal: #0891b2;
     --accent-gold: #d97706;
-    --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --font-montserrat: 'Montserrat', sans-serif;
+    --font-heading: 'Manrope', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+    --font-montserrat: 'Manrope', sans-serif;
+    --font-manrope: 'Manrope', sans-serif;
+  }
+
+  *, *::before, *::after {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 
   body {
     background-color: #f8fafc;
     color: #5f6360;
-    font-family: var(--font-body);
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     line-height: 1.6;
     letter-spacing: normal;
     overflow-x: hidden;
   }
 
-  /* Consistent Montserrat ExtraBold for all headings */
+  /* Consistent Manrope for all headings */
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    font-weight: 800;
+    font-family: 'Manrope', sans-serif !important;
     color: #080808;
     line-height: 1.35;
     letter-spacing: -0.02em;
   }
 
   p {
+    font-family: 'Manrope', sans-serif !important;
     color: #5f6360;
     line-height: 1.65;
   }
 }
 
-/* Custom Montserrat ExtraBold enforcement across headings, navigation, buttons, cards, and labels */
+/* Global Manrope enforcement across all headings, navigation, buttons, cards, forms, labels, footer, and UI components */
+html,
+body,
 h1, h2, h3, h4, h5, h6,
+p, span, a, button, input, textarea, select, label,
 .font-heading,
+.font-body,
+.font-sans,
+.font-montserrat,
+.font-manrope,
+.font-lemon,
+.font-lemon-milk,
 [data-reveal="heading"],
 [data-reveal="eyebrow"],
+[data-reveal="tagline"],
+nav,
 nav a,
+header,
 header nav a,
 header a,
 header button,
 nav button,
+footer,
+footer a,
+footer span,
+footer p,
+footer div,
+footer li,
 button,
 .btn,
 [role="button"],
+input,
 input[type="submit"],
 input[type="button"],
+input[type="text"],
+input[type="email"],
+textarea,
+select,
 label,
 .label,
 .card-title,
+.service-card,
 .service-card h3,
+.service-card p,
+.profile-card,
 .profile-card h3,
+.project-card,
 .project-card h3,
-.glass-panel h2,
-.glass-panel h3,
-.glass-panel h4 {
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-}
-
-/* Apply ExtraBold (weight 800) specifically to headings, navigation, buttons, cards, labels, and important text */
-h1, h2, h3, h4, h5, h6,
-.font-heading,
-[data-reveal="heading"],
-nav a,
-header nav a,
-button,
-.btn,
-[role="button"],
-input[type="submit"],
-input[type="button"],
-.service-card h3,
-.profile-card h3,
-.project-card h3,
+.glass-panel,
 .glass-panel h2,
 .glass-panel h3,
 .glass-panel h4,
-[data-reveal="eyebrow"],
-label,
-.label,
+.glass-panel p,
+.glass-panel span,
 .montserrat-extrabold {
-  font-weight: 800 !important;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
 /* Custom typography utility classes */
 .font-heading {
-  font-family: var(--font-heading) !important;
-  font-weight: 800 !important;
+  font-family: 'Manrope', sans-serif !important;
 }
 
 .font-body {
-  font-family: var(--font-body) !important;
+  font-family: 'Manrope', sans-serif !important;
+}
+
+.font-sans {
+  font-family: 'Manrope', sans-serif !important;
+}
+
+.font-montserrat {
+  font-family: 'Manrope', sans-serif !important;
+}
+
+.font-manrope {
+  font-family: 'Manrope', sans-serif !important;
+}
+
+.font-lemon,
+.font-lemon-milk {
+  font-family: 'Manrope', sans-serif !important;
+}
+
+.montserrat-extrabold {
+  font-family: 'Manrope', sans-serif !important;
 }
 
 /* Custom modern scrollbars */
@@ -126,7 +184,7 @@ label,
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #059669;
+  background: #DC8B20;
 }
 
 /* Glassmorphism & clean card utilities */
@@ -141,12 +199,12 @@ label,
 }
 .glass-panel-hover:hover {
   transform: translateY(-3px);
-  border-color: #10b981;
-  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.08), 0 4px 8px -4px rgba(0, 0, 0, 0.04);
+  border-color: #DC8B20;
+  box-shadow: 0 12px 24px -6px rgba(220, 139, 32, 0.15), 0 4px 8px -4px rgba(0, 0, 0, 0.04);
 }
 
 .glow-emerald {
-  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 25px -5px rgba(220, 139, 32, 0.2);
 }
 
 .gold-gradient-text {
@@ -157,7 +215,7 @@ label,
 }
 
 .emerald-gradient-text {
-  background: linear-gradient(135deg, #059669 0%, #10b981 50%, #047857 100%);
+  background: linear-gradient(135deg, #DC8B20 0%, #DC8B20 50%, #b56c12 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -219,8 +277,8 @@ label,
 .service-card-effect:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.12),
-              0 10px 15px -8px rgba(5, 150, 105, 0.08);
-  border-color: rgba(16, 185, 129, 0.5);
+              0 10px 15px -8px rgba(220, 139, 32, 0.12);
+  border-color: #DC8B20;
 }
 
 /* Light & Elegant Services Card - Resting and Smooth Hover States */
@@ -238,10 +296,10 @@ label,
 .service-card-interactive:hover {
   background: linear-gradient(180deg, #ffffff 0%, #fbfdfc 60%, #f8fbf9 100%);
   transform: translateY(-6px);
-  border-color: rgba(16, 185, 129, 0.45);
+  border-color: #DC8B20;
   box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.08),
-              0 10px 20px -8px rgba(5, 150, 105, 0.09),
-              0 0 0 1px rgba(16, 185, 129, 0.15);
+              0 10px 20px -8px rgba(220, 139, 32, 0.12),
+              0 0 0 1px rgba(220, 139, 32, 0.25);
 }
 
 /* Cinematic Soundstage Vignette & 3D Lighting */

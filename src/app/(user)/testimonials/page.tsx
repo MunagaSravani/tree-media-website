@@ -71,9 +71,9 @@ export default function TestimonialsPage() {
       <section className="text-center space-y-4">
         <div
           data-reveal="eyebrow"
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-emerald-300 text-emerald-700 text-xs font-semibold uppercase tracking-widest shadow-xs"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-[#DC8B20]/50 text-[#DC8B20] text-xs font-semibold uppercase tracking-widest shadow-xs"
         >
-          <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+          <Sparkles className="w-3.5 h-3.5 text-[#DC8B20]" />
           <span>Producer & Director Reviews</span>
         </div>
         <h1
@@ -116,13 +116,13 @@ export default function TestimonialsPage() {
                   className="w-11 h-11 rounded-full object-cover border border-slate-200"
                 />
               ) : (
-                <div className="w-11 h-11 rounded-full bg-emerald-50 text-emerald-700 font-bold flex items-center justify-center text-sm border border-emerald-100">
+                <div className="w-11 h-11 rounded-full bg-[#DC8B20]/10 text-[#DC8B20] font-bold flex items-center justify-center text-sm border border-[#DC8B20]/20">
                   {rev.personName[0]}
                 </div>
               )}
               <div>
                 <h4 className="text-sm font-bold text-slate-900">{rev.personName}</h4>
-                <p className="text-xs text-emerald-700 font-medium">{rev.designation}</p>
+                <p className="text-xs text-[#DC8B20] font-medium">{rev.designation}</p>
                 <p className="text-[11px] text-slate-500">{rev.company}</p>
               </div>
             </div>
