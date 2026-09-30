@@ -42,7 +42,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 Create a `.env` file in the project root with the following variables:
 
 ```env
-DATABASE_URL="postgres://postgres@localhost:5432/tree_media"
+DATABASE_URL="postgresql://neondb_owner:npg_TNxUisuE46Mq@ep-dawn-thunder-b53t0ujl-pooler.c-7.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
 JWT_SECRET="super-secret-tree-media-token-key-2026-tree-agency"
 NEXT_PUBLIC_APP_URL="http://localhost:3000"
 ```
