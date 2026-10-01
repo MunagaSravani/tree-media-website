@@ -203,6 +203,162 @@ export default async function AboutPage() {
         </div>
       </section>
 
+      {/* Board of Directors */}
+      <section id="board-of-directors" className="max-w-7xl mx-auto px-6 space-y-10">
+        <div className="text-center max-w-2xl mx-auto space-y-2">
+          <span
+            data-reveal="eyebrow"
+            className="text-xs font-semibold text-[#DC8B20] uppercase tracking-wider block"
+          >
+            Leadership
+          </span>
+          <h2
+            data-reveal="heading"
+            className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight"
+          >
+            Board of Directors
+          </h2>
+          <p
+            data-reveal="tagline"
+            className="text-sm lg:text-base text-slate-600 leading-relaxed"
+          >
+            The visionary executive leadership guiding Tree Media&apos;s creative excellence, strategic talent representation, and industry growth.
+          </p>
+        </div>
+
+        {/* Top Leader (Alone at Top Center) */}
+        <div className="flex justify-center pt-2">
+          {[
+            {
+              name: "D.Praveen Kumar",
+              role: "Managing Director",
+              image: "/images/board/director-1.jpg",
+              objectPosition: "center 15%",
+              scaleClass: "scale-100",
+            },
+          ].map((member, idx) => (
+            <div
+              key={idx}
+              data-reveal="fade-up"
+              data-reveal-delay={100}
+              className="group flex flex-col items-center text-center space-y-4"
+            >
+              {/* Circular Portrait */}
+              <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full overflow-hidden bg-slate-100 ring-1 ring-slate-200/90 shadow-sm group-hover:ring-2 group-hover:ring-[#DC8B20] group-hover:shadow-xl group-hover:shadow-[#DC8B20]/15 group-hover:-translate-y-1 transition-all duration-300 ease-out">
+                <div className={`w-full h-full ${member.scaleClass}`}>
+                  <img
+                    src={member.image}
+                    alt={`${member.name} - ${member.role}`}
+                    style={{ objectPosition: member.objectPosition }}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              {/* Leader Info */}
+              <div className="space-y-1">
+                <h3 className="text-lg lg:text-xl font-bold text-slate-900 group-hover:text-[#DC8B20] transition-colors duration-300 tracking-tight">
+                  {member.name}
+                </h3>
+                <p className="text-xs font-semibold text-[#DC8B20] uppercase tracking-wider">
+                  {member.role.split(" | ").map((role, index) => (
+                    <span key={index} className="block">
+                      {role}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Remaining 6 Leaders in 2 Rows of 3 */}
+        <div
+          data-reveal="stagger"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-12 max-w-4xl mx-auto pt-2"
+        >
+          {[
+            {
+              name: "Belli.Saidulu",
+              role: "Co-Founder",
+              image: "/images/board/director-2.jpg",
+              objectPosition: "center 20%",
+              scaleClass: "scale-[0.92]",
+            },
+            {
+              name: "Chejarla.Sivaprasad",
+              role: "Co-Founder",
+              image: "/images/board/director-3.jpg",
+              objectPosition: "center 10%",
+              scaleClass: "scale-[1.08]",
+            },
+            {
+              name: "Yadlapalli.Charan",
+              role: "Co-Founder",
+              image: "/images/board/director-4.jpg",
+              objectPosition: "center 16%",
+              scaleClass: "scale-[0.94]",
+            },
+            {
+              name: "Boddapati.Krishna kanth",
+              role: "Marketing Director | Co-Founder",
+              image: "/images/board/director-5.jpg",
+              objectPosition: "center 16%",
+              scaleClass: "scale-[0.94]",
+            },
+            {
+              name: "Palepu.Mahendra Babu",
+              role: "Marketing Director | Co-Founder",
+              image: "/images/board/director-6.jpg",
+              objectPosition: "center 16%",
+              scaleClass: "scale-[0.94]",
+            },
+            {
+              name: "Darapureddy.Sriramulu",
+              role: "Managing Director & IT |  Co-Founder",
+              image: "/images/board/director-7.jpg",
+              objectPosition: "center 14%",
+              scaleClass: "scale-100",
+            },
+          ].map((member, idx) => (
+            <div
+              key={idx}
+              data-reveal="fade-up"
+              data-reveal-delay={150 + idx * 75}
+              className="group flex flex-col items-center text-center space-y-4"
+            >
+              {/* Circular Portrait */}
+              <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full overflow-hidden bg-slate-100 ring-1 ring-slate-200/90 shadow-sm group-hover:ring-2 group-hover:ring-[#DC8B20] group-hover:shadow-xl group-hover:shadow-[#DC8B20]/15 group-hover:-translate-y-1 transition-all duration-300 ease-out">
+                <div className={`w-full h-full ${member.scaleClass}`}>
+                  <img
+                    src={member.image}
+                    alt={`${member.name} - ${member.role}`}
+                    style={{ objectPosition: member.objectPosition }}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              {/* Leader Info */}
+              <div className="space-y-1">
+                <h3 className="text-base sm:text-base lg:text-lg font-bold text-slate-900 group-hover:text-[#DC8B20] transition-colors duration-300 tracking-tight">
+                  {member.name}
+                </h3>
+                <p className="text-xs font-semibold text-[#DC8B20] uppercase tracking-wider">
+                  {member.role.split(" | ").map((role, index) => (
+                    <span key={index} className="block">
+                      {role}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Core Values */}
       <section className="max-w-7xl mx-auto px-6 space-y-10">
         <div className="text-center max-w-xl mx-auto space-y-2">
